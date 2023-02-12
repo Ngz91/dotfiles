@@ -194,7 +194,8 @@ bar {
 }
 
 exec xrandr --output Virtual-1 --mode 1920x1080
-exec feh --bg-scale $HOME/Downloads/city-night-1.jpg
+exec feh --bg-scale $HOME/Downloads/anime-room-1.jpg
+exec picom
 
 gaps inner 10
 gaps outer 0
