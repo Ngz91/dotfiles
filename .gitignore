@@ -3,4 +3,12 @@ dconf/
 xarchiver/
 xfce4/
 pulse/
+GIMP/
+gtk-2.0/
+rofi/applets/
+rofi/colors/
+rofi/images/
+rofi/launchers/
+rofi/powermenu/
+rofi/scripts/
 mimeapps.list
