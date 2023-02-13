@@ -6,10 +6,14 @@ pulse/
 GIMP/
 gtk-2.0/
 spotify/
+pipewire/
+spicetify/Backup/
+spicetify/Extracted/
 rofi/applets/
 rofi/colors/
 rofi/images/
 rofi/launchers/
 rofi/powermenu/
 rofi/scripts/
+systemd/user/
 mimeapps.list
