@@ -60,6 +60,8 @@ bindsym $mod+Shift+f exec thunar
 
 bindsym $mod+Shift+n exec rofi-launcher
 
+bindsym $mod+Shift+m exec spotify-launcher
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
