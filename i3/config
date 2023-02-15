@@ -54,6 +54,8 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
+
+# Keybindings
 bindsym $mod+Shift+b exec firefox --new-window
 
 bindsym $mod+Shift+f exec thunar
@@ -61,6 +63,8 @@ bindsym $mod+Shift+f exec thunar
 bindsym $mod+Shift+n exec rofi-launcher
 
 bindsym $mod+Shift+m exec spotify-launcher
+
+bindsym $mod+Shift+v exec kitty -e ranger
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
