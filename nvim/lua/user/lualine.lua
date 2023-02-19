@@ -6,11 +6,6 @@ if not status_lualine_ok then
 	return
 end
 
-local navic_status_ok, navic = pcall(require, "nvim-navic")
-if not navic_status_ok then
-	return
-end
-
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
@@ -147,22 +142,6 @@ ins_left({
 		color_warn = { fg = colors.yellow },
 		color_info = { fg = colors.cyan },
 	},
-})
-
-local navic_gps = function()
-	local navic_location = navic.get_location()
-	if navic_location == "error" then
-		return ""
-	else
-		return navic.get_location()
-	end
-end
-
-ins_left({
-	navic_gps,
-	sources = { navic_gps },
-	cond = conditions.hide_in_width,
-	color = { fg = colors.blue }, -- Sets highlighting of component
 })
 
 -- Insert mid section. You can make any number of sections in neovim :)
