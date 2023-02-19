@@ -52,18 +52,18 @@ local Normal = Grey5
 local Border = Grey3
 local Decoration = Orange
 local Hidden = Grey3
-local BuiltIn = Red
+local BuiltIn = Cyan
 local VarName = Grey5
-local FuncName = Cyan
+local FuncName = Blue
 local TypeName = Violet
-local Key = Cyan
+local Key = Blue
 local Val = Violet
 local Parameter = Green
 local String = Yellow
 local Operator = Orange
 local Success = Green
 local Warning = Yellow
-local Info = Cyan
+local Info = Blue
 local Error = Red
 
 -- For reference elsewhere
