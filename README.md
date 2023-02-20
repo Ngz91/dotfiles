@@ -12,6 +12,8 @@
 <img alt="Issues" src="https://img.shields.io/github/issues/Ngz91/dotfiles?style=for-the-badge&logo=bilibili&color=F5E0DC&logoColor=D9E0EE&labelColor=3D426B" />
 </a>
 
+![](https://github.com/Ngz91/dotfiles/raw/master/gifs/Oregairu-Yukino.gif)
+
 </div>
 
 Details:
