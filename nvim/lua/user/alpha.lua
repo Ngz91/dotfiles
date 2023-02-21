@@ -43,7 +43,7 @@ local function footer()
 	local version = vim.version()
 	local nvim_version_info = " v" .. version.major .. "." .. version.minor .. "." .. version.patch
 
-	return datetime .. " 爵 ngzportfolio.vercel.app " .. nvim_version_info
+	return datetime .. "  " .. nvim_version_info
 end
 
 dashboard.section.footer.val = footer()
