@@ -81,39 +81,35 @@ Congrats Arch is now installed :tada:
 
 If you installed Arch in a virtual machine remember to remove the ISO file.
 
-After booting into session you will see a black screen and a bar on the bottom of the screen all in the incorrect resolution, i3 will then ask if you want a configuration to be build for you, select yes.
+After booting into session you will see a black screen and a bar at the bottom of the screen, all in the incorrect resolution. i3 will then ask if you want a configuration to be created for you, select yes.
 
 To fix the resolution open your terminal with Mod+enter and run this command (The Mod key is most likely your Windows key):
 ```
 xrandr
 ```
-This will give you a list with different screens and their resolution, select the one you wish to use and use this command:
+This will give you a list with different screens and their resolution, select the one you wish to use and run this command:
 ```
 xrandr --output *screen name here* --mode 1920x1080
 ```
 
-Also, if you wish to change your wallpaper open your terminal and run this commands:
+Next, run this command to synch and upgrade Arch packages:
+```
+sudo pacman -Syu
+```
+
+Also, if you wish to change your wallpaper run this commands:
 ```
 sudo pacman -S feh
 feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
 ```
 
-To make this changes permanent nevigate to .config/i3 on your terminal and open in vim the config file that`s there. Then add this lines to the end of the file
+To make this changes permanent nevigate to .config/i3 on your terminal and open in vim the config file that's there. Then add these lines to the end of the file
 ```
 exec --no-startup-id xrandr --output *screen-name* --mode 1920x1080
 exec --no-startup-id feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
 ```
 
-If config file or the .config folder does not exist in your machine, then create the .config folder and inside of it create an i3 folder, this will hold the i3 configuration for the current user. Navigate to the i3 folder and create a config file with vim running vim config, run :w+enter to save the file and copy my configuration deleting this lines:
-
-```
-exec --no-startup-id xrandr --output Virtual1 --mode 1920x1080
-exec --no-startup-id killall back4.sh 
-exec --no-startup-id sh back4.sh 0.025 ~/.config/gifs/room-animated.gif
-exec --no-startup-id sh ~/.config/polybar/launch.sh
-exec --no-startup-id picom
-```
-And subtitude them with the preceding ones (This will be a good time for you to familiarize yourself with the default i3 keybindings, like Mod+arrowKeys to navigate through the windows.).
+If the config file or the .config folder do not exist in your machine, then create the .config folder and inside of it create an i3 folder, this will hold the i3 configuration for the current user. Navigate to the i3 folder and create a config file with vim running vim config, copy [this configuration](https://github.com/i3/i3/blob/next/etc/config) and run :w+enter inside of vim to save the file. Then at the end of the file add the lines aforementioned (This will be a good time to familiarize yourself with the i3 keybindings, like Mod+arrowKeys to navigate through the windows).
 
 Now save the file and exit vim.
 <div>
@@ -127,7 +123,7 @@ Test this changes by rebooting into Arch
 reboot
 ```
 
-# Some packages to install
+## Some packages to install
 If you are on a VM install guest additions
 ```
 sudo pacman -S virtualbox-guest-utils
@@ -144,4 +140,22 @@ options snd-hda-intel vid=8086 pid=8ca0 snoop=0
 options snd-intel8x0 ac97_clock=48000
 ```
 
-# Kitty Installation
+## Yay installation
+Yay is an AUR Helper Written in Go. We will use it to install some packages that are not in the official package repo or the version that is it's outdated. Visit the official [github repository](https://github.com/Jguer/yay) for the installation steps or run this command:
+```
+pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+```
+
+## Kitty installation
+Kitty is a GPU based terminal emulator. Intall it by running
+```
+sudo pacman -S kitty
+```
+Then change the i3 configuration to open kitty instead of the default terminal by adding this line to the i3 config file
+```
+bindsym $mod+Return exec kitty
+```
+You can change kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of interest.
+
+## Zsh & Oh-my-zsh
+(continue)
