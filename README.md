@@ -140,6 +140,16 @@ options snd-hda-intel vid=8086 pid=8ca0 snoop=0
 options snd-intel8x0 ac97_clock=48000
 ```
 
+Also, install these packages, they will be needed.
+```
+sudo pacman -S ripgrep fzf xsel nodejs npm lazygit git python-pip
+```
+
+To render japanese characters install these packages
+```
+sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
+```
+
 ## Yay installation
 Yay is an AUR Helper Written in Go. We will use it to install some packages that are not in the official package repo or the version that is it's outdated. Visit the official [github repository](https://github.com/Jguer/yay) for the installation steps or run this command:
 ```
@@ -147,10 +157,16 @@ pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git
 ```
 
 ## Kitty installation
-Kitty is a GPU based terminal emulator. Intall it by running
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/wiggle.gif width="300" height="250" />
+</div>
+
+Kitty is a GPU based terminal emulator. Install it by running:
+
 ```
 sudo pacman -S kitty
 ```
+
 Then change the i3 configuration to open kitty instead of the default terminal by adding this line to the i3 config file
 ```
 bindsym $mod+Return exec kitty
@@ -158,4 +174,35 @@ bindsym $mod+Return exec kitty
 You can change kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of interest.
 
 ## Zsh & Oh-my-zsh
+
+<div align="center">
+
+![](https://github.com/Ngz91/dotfiles/raw/master/gifs/shirogane-screaming.gif)
+
+</div>
+
+Install Zsh by running:
+```
+sudo pacman -S zsh zsh-completions
+```
+Change your default shell by running
+```
+chsh -s /bin/zsh
+```
+And finally install Oh-my-szh by running
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+It will ask you if you want to make zsh your default shell, select yes. Exit your terminal and launch it again and you will see the terminal in a different style.
+
+To change the theme of oh-my-zsh change this line in ~/.zshrc
+```
+ZSH_THEME="robbyrussel"
+```
+And load it using:
+```
+source .zshrc
+```
+
+## Nerd Fonts installation
 (continue)
