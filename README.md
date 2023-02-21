@@ -36,11 +36,11 @@
 
 First install Arch linux following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the archinstall package to automate the installation process.
 
-To install Arch using The ArchInstall package check your internet connection first running:
+To install Arch using The ArchInstall package check your internet connection first by running:
 ```
 ping https://archlinux.org/
 ```
-And then use this command:
+And then run this command:
 ```
 python -m archinstall --script guided
 ```
@@ -104,7 +104,7 @@ exec --no-startup-id xrandr --output *screen-name* --mode 1920x1080
 exec --no-startup-id feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
 ```
 
-If no config file or .config folder does not exist in your machine then create the .config folder and inside of it create an i3 folder, this will hold the i3 configuration for the current user. Navigate to the i3 folder and create a config file with vim running vim config, run :w+enter to save the file and copy my configuration deleting this lines:
+If config file or the .config folder does not exist in your machine, then create the .config folder and inside of it create an i3 folder, this will hold the i3 configuration for the current user. Navigate to the i3 folder and create a config file with vim running vim config, run :w+enter to save the file and copy my configuration deleting this lines:
 
 ```
 exec --no-startup-id xrandr --output Virtual1 --mode 1920x1080
@@ -113,11 +113,35 @@ exec --no-startup-id sh back4.sh 0.025 ~/.config/gifs/room-animated.gif
 exec --no-startup-id sh ~/.config/polybar/launch.sh
 exec --no-startup-id picom
 ```
-And subtitude them with the preceding ones.
+And subtitude them with the preceding ones (This will be a good time for you to familiarize yourself with the default i3 keybindings, like Mod+arrowKeys to navigate through the windows.).
 
 Now save the file and exit vim.
+<div>
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/images/Quit_Vim_Editor.jpg width="250" height="250" />
+</div>
+(:q+enter to quit vim)
+<br/><br/>
 
 Test this changes by rebooting into Arch
 ```
-
+reboot
 ```
+
+# Some packages to install
+If you are on a VM install guest additions
+```
+sudo pacman -S virtualbox-guest-utils
+```
+
+Test the audio, in case it's laggy or choppy make sure these packages are installed
+```
+sudo pacman -S pipewire pipewire-{alsa,jack,media-session,pulse}
+```
+
+If you are on a VM follow [this guide](https://wiki.archlinux.org/title/VirtualBox/Install_Arch_Linux_as_a_guest).  In my case I only needed to add these lines to etc/modprobe.d/sound.conf
+```
+options snd-hda-intel vid=8086 pid=8ca0 snoop=0
+options snd-intel8x0 ac97_clock=48000
+```
+
+# Kitty Installation
