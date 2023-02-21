@@ -31,3 +31,47 @@
 - Compositor:      [Picom](https://github.com/yshui/picom)
 - File Manager:    [Ranger](https://github.com/ranger/ranger)
 - IDE:             [Nvim](https://neovim.io/)
+
+# Installation Guide (WIP)
+
+First install Arch linux following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the archinstall package to automate the installation process.
+
+To install Arch using The ArchInstall package check your internet connection first running:
+```
+ping https://archlinux.org/
+```
+And then use this command:
+```
+python -m archinstall --script guided
+```
+
+You'll see a promp giving you some options similar to this:
+(Add promp image here)
+
+Select the options that better work for you but for my case and configuration the options are:
+- language: English
+- keyboard layout: us
+- mirror region: Worldwide
+- harddrives: *VM or partition hardrive here* ext4, wipe all selected...
+- encryption pwd: *encryption password* None
+- bootloader: systemd-bootct1
+- swap: True
+- hostname: *Name of the host machine*
+- root pwd: *rootpassword*
+- user account: *superuser name and password*
+- profile: desktop -> i3 -> i3-gaps -> AMD/ATI (open-source)
+- audio: pipewire
+- kernel: linux
+- additional packages: firefox, vim
+- network: Copy ISO network conf...
+- timezone: *your timezone*
+- automatic time synch: true
+- Additional repos: multilib
+
+After cheking that the options are correct select Install.
+
+Congrats Arch is now installed :tada:
+
+Now let's get to the painless Arch configuration part:
+
+(continue)
