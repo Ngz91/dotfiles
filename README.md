@@ -46,7 +46,7 @@ python -m archinstall --script guided
 ```
 
 You'll see a promp giving you some options similar to this:
-(Add promp image here)
+![](https://raw.githubusercontent.com/Ngz91/dotfiles/master/screenshots/archinstall-example.jpg)
 
 Select the options that better work for you but for my case and configuration the options are:
 - language: English
@@ -62,7 +62,7 @@ Select the options that better work for you but for my case and configuration th
 - profile: desktop -> i3 -> i3-gaps -> AMD/ATI (open-source)
 - audio: pipewire
 - kernel: linux
-- additional packages: firefox, vim
+- additional packages: firefox, vim, thunar
 - network: Copy ISO network conf...
 - timezone: *your timezone*
 - automatic time synch: true
@@ -72,6 +72,52 @@ After cheking that the options are correct select Install.
 
 Congrats Arch is now installed :tada:
 
-Now let's get to the painless Arch configuration part:
+# Configuring Arch
+<div align="center">
 
-(continue)
+![](https://github.com/Ngz91/dotfiles/raw/master/gifs/anime-run.gif)
+
+</div>
+
+If you installed Arch in a virtual machine remember to remove the ISO file.
+
+After booting into session you will see a black screen and a bar on the bottom of the screen all in the incorrect resolution, i3 will then ask if you want a configuration to be build for you, select yes.
+
+To fix the resolution open your terminal with Mod+enter and run this command (The Mod key is most likely your Windows key):
+```
+xrandr
+```
+This will give you a list with different screens and their resolution, select the one you wish to use and use this command:
+```
+xrandr --output *screen name here* --mode 1920x1080
+```
+
+Also, if you wish to change your wallpaper open your terminal and run this commands:
+```
+sudo pacman -S feh
+feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
+```
+
+To make this changes permanent nevigate to .config/i3 on your terminal and open in vim the config file that`s there. Then add this lines to the end of the file
+```
+exec --no-startup-id xrandr --output *screen-name* --mode 1920x1080
+exec --no-startup-id feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
+```
+
+If no config file or .config folder does not exist in your machine then create the .config folder and inside of it create an i3 folder, this will hold the i3 configuration for the current user. Navigate to the i3 folder and create a config file with vim running vim config, run :w+enter to save the file and copy my configuration deleting this lines:
+
+```
+exec --no-startup-id xrandr --output Virtual1 --mode 1920x1080
+exec --no-startup-id killall back4.sh 
+exec --no-startup-id sh back4.sh 0.025 ~/.config/gifs/room-animated.gif
+exec --no-startup-id sh ~/.config/polybar/launch.sh
+exec --no-startup-id picom
+```
+And subtitude them with the preceding ones.
+
+Now save the file and exit vim.
+
+Test this changes by rebooting into Arch
+```
+
+```
