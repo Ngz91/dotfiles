@@ -16,7 +16,11 @@
 
 </div>
 
-Details:
+# Preview:
+![](https://raw.githubusercontent.com/Ngz91/dotfiles/master/screenshots/ArchPreview1.png)
+![](https://raw.githubusercontent.com/Ngz91/dotfiles/master/screenshots/ArchPreview2.png)
+
+# Details:
 
 - OS:              [Arch](https://archlinux.org/)
 - WM:              [i3](https://i3wm.org/)
