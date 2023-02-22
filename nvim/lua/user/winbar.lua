@@ -47,7 +47,7 @@ M.get_filename = function()
 
     vim.api.nvim_set_hl(0, "Winbar", { fg = "#51afef" })
 
-    return " " .. "%#" .. hl_group .. "#" .. file_icon .. "%*" .. " " .. "%#Winbar#" .. " Gps" .. "%*"
+    return " " .. "%#" .. hl_group .. "#" .. file_icon .. "%*" .. " " .. "%#Winbar#" .. " Ngz91" .. "%*"
   end
 end
 
