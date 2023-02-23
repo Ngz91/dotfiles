@@ -81,7 +81,7 @@ Congrats Arch is now installed :tada:
 
 If you installed Arch in a virtual machine remember to remove the ISO file.
 
-After booting into session you will see a black screen and a bar at the bottom of the screen, all in the incorrect resolution. i3 will then ask if you want a configuration to be created for you, select yes.
+After booting into session you will see a black screen and a bar at the bottom of the screen, all in the incorrect resolution. i3 will then ask if you want a configuration to be created for you, select yes and this will create a configuration file at .config/i3 named config where you can add your keybindings, exec commands, etc. If you want to familiarize yourself with the i3 WM I recommend reading their [user guide](https://i3wm.org/docs/userguide.html).
 
 To fix the resolution open your terminal with Mod+enter and run this command (The Mod key is most likely your Windows key):
 ```
@@ -103,19 +103,17 @@ sudo pacman -S feh
 feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
 ```
 
-To make this changes permanent nevigate to .config/i3 on your terminal and open in vim the config file that's there. Then add these lines to the end of the file
+To make this changes permanent nevigate to .config/i3 on your terminal and open in vim the config file that's there. Then add these lines to the end of the file. (If you don't know how to use vim use [this cheat sheet](https://vim.rtorr.com/))
 ```
 exec --no-startup-id xrandr --output *screen-name* --mode 1920x1080
 exec --no-startup-id feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
 ```
 
-If the config file or the .config folder do not exist in your machine, then create the .config folder and inside of it create an i3 folder, this will hold the i3 configuration for the current user. Navigate to the i3 folder and create a config file with vim running vim config, copy [this configuration](https://github.com/i3/i3/blob/next/etc/config) and run :w+enter inside of vim to save the file. Then at the end of the file add the lines aforementioned (This will be a good time to familiarize yourself with the i3 keybindings, like Mod+arrowKeys to navigate through the windows).
-
 Now save the file and exit vim.
 <div>
-<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/images/Quit_Vim_Editor.jpg width="250" height="250" />
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/images/Quit_Vim_Editor.jpg width="300" height="300" />
 </div>
-(:q+enter to quit vim)
+(:q+enter to exit vim)
 <br/><br/>
 
 Test this changes by rebooting into Arch
@@ -129,7 +127,7 @@ If you are on a VM install guest additions
 sudo pacman -S virtualbox-guest-utils
 ```
 
-Test the audio, in case it's laggy or choppy make sure these packages are installed
+Test the audio. In case it's laggy or choppy make sure these packages are installed
 ```
 sudo pacman -S pipewire pipewire-{alsa,jack,media-session,pulse}
 ```
@@ -142,7 +140,7 @@ options snd-intel8x0 ac97_clock=48000
 
 Also, install these packages, they will be needed.
 ```
-sudo pacman -S ripgrep fzf xsel nodejs npm lazygit git python-pip
+sudo pacman -S ripgrep fzf xsel nodejs npm lazygit git python-pip thunar-archive-plugin zip
 ```
 
 To render japanese characters install these packages
@@ -205,4 +203,32 @@ source .zshrc
 ```
 
 ## Nerd Fonts installation
-(continue)
+Nerd fonts add glyphs and icons to your terminal, this will allow, for example, Neovim to render icons. Visit [their page](https://www.nerdfonts.com/) to learn more about them. We will need to install some of them, you can install and use any one that you want, but to install them I'll use the ones I use for my configuration.
+
+First make a .fonts folder in the same directory where .config is, then download [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip), [Products Sans](https://github.com/iamverysimp1e/fonts/raw/master/product-sans.zip) and all [Material Design Icons](https://github.com/google/material-design-icons/tree/master/variablefont) except the ones that end with .codepoints. Unpack them and place them in place them into `~/.fonts` or `~/.local/share/fonts.` Then run this command for your system to detect the new fonts:
+```
+fc-cache -fv
+```
+
+## Picom
+Picom is a window compotior, in our case it will let us have transparent windows. Install it by running:
+```
+sudo pacman -S picom
+```
+Start Picom by running `picom` in your terminal, you will see that the terminal is now transparent, but the same goes for all other windows that you have open. We need to fix this.
+
+To modify Picom behavior create or edit the picom.conf file at .config folder, in this case the config file does not need to be in a folder. If you want transparency to be applied to a specific window open your terminal and type:
+```
+xprop
+```
+Click on the window that you want to apply the transparency and look for WM_CLASS(STRING), add this to your configuration. (I'll use kitty for this example)
+```
+opacity-rule = [
+    "85:class_g = 'kitty' && focused",
+    "85:class_g = 'kitty' && !focused",
+];
+```
+This tells picom to follow this opacity rules for the specific program that's running. Now, the same rules can be applied if you don't want the window to have any transparency, for exaple, I don't want firefox to hae any opacity. To achieve that is add this to the conf file.
+```
+"100:class_g = 'firefox'",
+```
