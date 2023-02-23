@@ -149,6 +149,11 @@ sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
 ```
 
 ## Yay installation
+
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/yogurt-anime.gif width="500" height="280" />
+</div>
+
 Yay is an AUR Helper Written in Go. We will use it to install some packages that are not in the official package repo or the version that is it's outdated. Visit the official [github repository](https://github.com/Jguer/yay) for the installation steps or run this command:
 ```
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
@@ -156,7 +161,7 @@ pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git
 
 ## Kitty installation
 <div align="center">
-<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/wiggle.gif width="300" height="250" />
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/wiggle.gif width="500" height="280" />
 </div>
 
 Kitty is a GPU based terminal emulator. Install it by running:
@@ -211,6 +216,11 @@ source .zshrc
 ```
 
 ## Picom
+
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/disappearing.gif width="500" height="280" />
+</div>
+
 Picom is a window compotior, in our case it will let us have transparent windows. Install it by running:
 ```
 sudo pacman -S picom
@@ -257,6 +267,11 @@ exec --no-startup-id sh rofi -show drun
 ```
 
 ## Polybar
+
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/doug-walker-sped-up.gif width="500" height="280" />
+</div>
+
 Polybar is a highly customizable status bar. Install it by running:
 ```
 sudo pacman -S polybar
@@ -273,5 +288,12 @@ Then add this i3 config file:
 exec --no-startup-id sh ~/.config/polybar/launch.sh
 ```
 
+Polybar is pretty well documented, you can read the documentation in [their repository](https://github.com/polybar/polybar/wiki/) if you have any doubt.
+
 ## Ranger and Zathura
 (continue)
+
+## Spotify & Spicetify
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/persona-persona3.gif width="500" height="280" />
+</div>
