@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>🐧 Dot Files 🐧</h1>
+    <h1>🐧 Dot Files & guide 🐧</h1>
     <h3>🍙 My personal Arch linux configuration files 🍙</h3>
 </div>
 
@@ -171,6 +171,14 @@ bindsym $mod+Return exec kitty
 ```
 You can change kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of interest.
 
+## Nerd Fonts installation
+Nerd fonts add glyphs and icons to your terminal, this will allow, for example, Neovim to render icons. Visit [their page](https://www.nerdfonts.com/) to learn more about them. We will need to install some of them, you can install and use any one that you want, but to install them I'll use the ones I use for my configuration.
+
+First make a .fonts folder in the same directory where .config is, then download [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip), [Products Sans](https://github.com/iamverysimp1e/fonts/raw/master/product-sans.zip) and all [Material Design Icons](https://github.com/google/material-design-icons/tree/master/variablefont) except the ones that end with .codepoints. Unpack them and place them in place them into `~/.fonts` or `~/.local/share/fonts.` Then run this command for your system to detect the new fonts:
+```
+fc-cache -fv
+```
+
 ## Zsh & Oh-my-zsh
 
 <div align="center">
@@ -202,14 +210,6 @@ And load it using:
 source .zshrc
 ```
 
-## Nerd Fonts installation
-Nerd fonts add glyphs and icons to your terminal, this will allow, for example, Neovim to render icons. Visit [their page](https://www.nerdfonts.com/) to learn more about them. We will need to install some of them, you can install and use any one that you want, but to install them I'll use the ones I use for my configuration.
-
-First make a .fonts folder in the same directory where .config is, then download [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip), [Products Sans](https://github.com/iamverysimp1e/fonts/raw/master/product-sans.zip) and all [Material Design Icons](https://github.com/google/material-design-icons/tree/master/variablefont) except the ones that end with .codepoints. Unpack them and place them in place them into `~/.fonts` or `~/.local/share/fonts.` Then run this command for your system to detect the new fonts:
-```
-fc-cache -fv
-```
-
 ## Picom
 Picom is a window compotior, in our case it will let us have transparent windows. Install it by running:
 ```
@@ -232,3 +232,46 @@ This tells picom to follow this opacity rules for the specific program that's ru
 ```
 "100:class_g = 'firefox'",
 ```
+As a side note, Picom uses backends for rendering, some of them handle features that others can't. The default one is xrender, but you can try others at your own risk. Here is a [manual](https://man.archlinux.org/man/picom.1.en) explaining other options available for configuration. In case Picom hangs your computer, open a console by pressing `Ctrl+Alt+F2`, log in and change the backend line.
+
+To run Picom on start up add this line to your i3 config file:
+```
+exec --no-startup-id picom
+```
+If you are having problems with picom configuration copy my conf file and from there edit what you want and what not.
+
+## Rofi
+Rofi is an App launcher, with it you can easily search and launch installed apps. It also works for browsing files and commands. To install it run:
+```
+sudo pacman -S rofi
+```
+Then run it using `rofi --show drun`
+
+Create a rofi folder in your config and [add this files](https://github.com/iamverysimp1e/dots/tree/main/configs/rofi), this will give you a start for you to customize your own rofi theme.
+
+In case you want a rofi theme similar to mine follow [this guide](https://github.com/adi1090x/rofi)
+
+To assign rofi a keybinding add this to your i3 config file:
+```
+exec --no-startup-id sh rofi -show drun
+```
+
+## Polybar
+Polybar is a highly customizable status bar. Install it by running:
+```
+sudo pacman -S polybar
+```
+Then create a polybar folder in .config to hold your configuration. Polybar configuration deserves a guide on it's own but you can set one basic one following this steps. First copy my polybar config files to your polybar folder. In the same folder grand permissions to these files:
+```
+chmod +x launch.sh
+chmod u+x scripts/diskusage
+chmod u+x scripts/memory
+chmod u+x scripts/network
+```
+Then add this i3 config file:
+```
+exec --no-startup-id sh ~/.config/polybar/launch.sh
+```
+
+## Ranger and Zathura
+(continue)
