@@ -177,6 +177,11 @@ bindsym $mod+Return exec kitty
 You can change kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of interest.
 
 ## Nerd Fonts installation
+
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-smile.gif width="500" height="280" />
+</div>
+
 Nerd fonts add glyphs and icons to your terminal, this will allow, for example, Neovim to render icons. Visit [their page](https://www.nerdfonts.com/) to learn more about them. We will need to install some of them, you can install and use any one that you want, but to install them I'll use the ones I use for my configuration.
 
 First make a .fonts folder in the same directory where .config is, then download [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip), [Products Sans](https://github.com/iamverysimp1e/fonts/raw/master/product-sans.zip) and all [Material Design Icons](https://github.com/google/material-design-icons/tree/master/variablefont) except the ones that end with .codepoints. Unpack them and place them in place them into `~/.fonts` or `~/.local/share/fonts.` Then run this command for your system to detect the new fonts:
@@ -285,12 +290,12 @@ chmod u+x scripts/diskusage
 chmod u+x scripts/memory
 chmod u+x scripts/network
 ```
-Then add this i3 config file:
+Then add this to your i3 config file:
 ```
 exec --no-startup-id sh ~/.config/polybar/launch.sh
 ```
 
-Polybar is pretty well documented, you can read the documentation in [their repository](https://github.com/polybar/polybar/wiki/) if you have any doubt.
+Polybar is pretty well documented, you can read the documentation in [their repository](https://github.com/polybar/polybar/wiki/) if you have any doubt on how to use it or customize it.
 
 ## Ranger and Zathura
 (TODO)
@@ -331,3 +336,10 @@ Visit the [Unixporn forum](https://www.reddit.com/r/unixporn/) to see some aweso
 <div align="center">
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/coding-anime.gif width="500" height="280" />
 </div>
+(TODO)
+
+# Some Resources
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-sam-mgr.gif width="500" height="280" />
+</div>
+(TODO)
