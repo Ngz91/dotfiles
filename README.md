@@ -192,7 +192,7 @@ fc-cache -fv
 
 </div>
 
-Install Zsh by running:
+Zsh is a Unix Shell, we will use it in combination with Oh-my-zsh to customize our terminal. Install Zsh by running:
 ```
 sudo pacman -S zsh zsh-completions
 ```
@@ -214,6 +214,8 @@ And load it using:
 ```
 source .zshrc
 ```
+
+You can find all available Oh-my-zsh themes [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes).
 
 ## Picom
 
@@ -291,9 +293,41 @@ exec --no-startup-id sh ~/.config/polybar/launch.sh
 Polybar is pretty well documented, you can read the documentation in [their repository](https://github.com/polybar/polybar/wiki/) if you have any doubt.
 
 ## Ranger and Zathura
-(continue)
+(TODO)
 
 ## Spotify & Spicetify
 <div align="center">
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/persona-persona3.gif width="500" height="280" />
+</div>
+
+Install spotify using the package in Arch repo (Do not use Snap package since spicetify it's not gonna work with it)
+```
+sudo pacman -S spotify-launcher
+```
+Open it and log. Check your audio. Close it and install spicetify-cli, we will use it to customize Spotify theme. Install it by running:
+```
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
+```
+Navigate to the Spicetify folder in your .config folder and open config-zpui.ini. Here you will modify spotify_path and prefs_path. Their [official guide](https://spicetify.app/docs/advanced-usage/installation/) tells you how to find both paths but in my case it's they look like this:
+```
+spotify_path            = /home/ngz91/.local/share/spotify-launcher/install/usr/share/spotify/
+prefs_path              = /home/ngz91/.config/spotify/prefs
+```
+
+After this you can change your own theme with this command (I recommend doing this inside the spicetify Themes folder):
+```
+spicetify config current_theme "Path_to_your_configuration"
+```
+To add extensions, create an Extensions folder inside the Spicetify folder and use this command:
+```
+spicetify config extensions "Extension_name"
+```
+
+Then run `spicetify apply`, if it ask you for a backup run `spicetify backup apply`.
+
+Visit the [Unixporn forum](https://www.reddit.com/r/unixporn/) to see some awesome spicetify themes.
+
+## Neovim
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/coding-anime.gif width="500" height="280" />
 </div>
