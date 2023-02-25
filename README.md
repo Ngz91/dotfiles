@@ -109,6 +109,11 @@ exec --no-startup-id xrandr --output *screen-name* --mode 1920x1080
 exec --no-startup-id feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
 ```
 
+Also, you might want to assign a keybind to firefox. To do so, paste this line into your configuration (the location does not matter but it's a good idea to put all your keybindings after kill focused window keybind, that way it's easier to spot them in the file).
+```
+bindsym $mod+Shift+b exec firefox --new-window
+```
+
 Now save the file and exit vim.
 <div>
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/images/Quit_Vim_Editor.jpg width="300" height="300" />
@@ -258,6 +263,12 @@ exec --no-startup-id picom
 If you are having problems with picom configuration copy my conf file and from there edit what you want and what not.
 
 ## Rofi
+
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/kakashi-dog.gif width="500" height="280" />
+</div>
+
+
 Rofi is an App launcher, with it you can easily search and launch installed apps. It also works for browsing files and commands. To install it run:
 ```
 sudo pacman -S rofi
@@ -298,7 +309,31 @@ exec --no-startup-id sh ~/.config/polybar/launch.sh
 Polybar is pretty well documented, you can read the documentation in [their repository](https://github.com/polybar/polybar/wiki/) if you have any doubt on how to use it or customize it.
 
 ## Ranger and Zathura
-(TODO)
+
+<div align="center">
+<img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/studying-windy.gif width="500" height="280" />
+</div>
+
+Ranger is a console file manager with VI key bindings. Zathura is a highly customizable and functional document viewer. One great benefit of using these two programs is how little memory they use.
+
+To install both programs run:
+```
+sudo pacman -S zathura ranger
+```
+Then create their respective folders inside .config. You can copy my ranger configuration, it will give you something to start with. Same for the zathura configuration.
+    
+Some notes. If you want ranger to preview the images in kitty you'll need to install pillow by using this command:
+```
+pip install pillow
+```
+If there's a warning telling you that "The script x is installed in '/home/myusername/.local/bin' which is not on PATH" then add it. For zsh add `export PATH=$PATH:/home/username/.local/bin` to the end of .zshrc.
+
+Also if you want zathura to show the pdf page with it's original colors then set recolor to false in the configuration file. `set recolor "false"`
+
+You can assign ranger a keybind similar to this
+```
+bindsym $mod+Shift+v exec kitty -e ranger
+```
 
 ## Spotify & Spicetify
 <div align="center">
@@ -315,8 +350,8 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/inst
 ```
 Navigate to the Spicetify folder in your .config folder and open config-zpui.ini. Here you will modify spotify_path and prefs_path. Their [official guide](https://spicetify.app/docs/advanced-usage/installation/) tells you how to find both paths but in my case it's they look like this:
 ```
-spotify_path            = /home/ngz91/.local/share/spotify-launcher/install/usr/share/spotify/
-prefs_path              = /home/ngz91/.config/spotify/prefs
+spotify_path  = /home/ngz91/.local/share/spotify-launcher/install/usr/share/spotify/
+prefs_path    = /home/ngz91/.config/spotify/prefs
 ```
 
 After this you can change your own theme with this command (I recommend doing this inside the spicetify Themes folder):
@@ -332,14 +367,106 @@ Then run `spicetify apply`, if it ask you for a backup run `spicetify backup app
 
 Visit the [Unixporn forum](https://www.reddit.com/r/unixporn/) to see some awesome spicetify themes.
 
+You can use this kaybind to launch spotify:
+```
+bindsym $mod+Shift+m exec spotify-launcher
+```
+
 ## Neovim
+
 <div align="center">
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/coding-anime.gif width="500" height="280" />
 </div>
-(TODO)
 
-# Some Resources
+Neovim is a terminal based text editor, it's greatly powerfull and very hard to configure if you don't know what you are doing. I recommend using a neovim premade configuration before making your own, or you can configure one yourself by following Tatsuya Matsuyama [video](https://www.youtube.com/watch?v=ajmK0ZNcM4Q), that way you can get an understanding of how neovim configurations work and change or add things on your own.
+
+Some good premade configurations are:
+- [LunarVim](https://github.com/LunarVim/LunarVim)
+- [LazyVim](https://github.com/LazyVim/LazyVim)
+- [NvChad](https://github.com/NvChad/NvChad)
+
+The main language used for configuring neovim is Lua. You can familiarize yourself with the language by watching [this video](https://www.youtube.com/watch?v=1srFmjt1Ib0), but by knowing the basics you can make your own configuration.
+
+Neovim configuration folder structure looks something like this:
+
+```
+├── init.lua
+├── lua
+│   └── user
+│       ├── plugin1.lua
+│       ├── plugin2.lua
+│       ├── plugin3.lua
+        ...
+│       ├── lsp
+│       │   ├── configs.lua
+│       │   ├── handlers.lua
+│       │   ├── init.lua
+│       │   ├── null-ls.lua
+│       │   └── settings
+│       │       ├── lsp1Settings.lua
+│       │       ├── lsp2Settings.lua
+                ...
+└── plugin
+    └── packer_compiled.lua
+```
+
+init.lua is where the first file neovim loads, here you can require other files where the plugin configuration is.  lua/user is where your lua scripts and plugins configurations are, you can require them in init.lua by using the require function `require("user.plugin1")`. There's also a lsp(language server protocol) folder where all lsp configuration lies, here we can configure our language servers and lsp based plugins like lsp-saga, illuminate, etc.
+
+NOTE: This is not a standard, there are various ways this folder can be structured, but this one is very easy to understand.
+
+To install plugins there are various plugins managers, but the two most populars are [Packer.nvim](https://github.com/wbthomason/packer.nvim) and [lazy.nvim](https://github.com/folke/lazy.nvim). To install packer run:
+```
+yay -S nvim-packer-git
+```
+
+Follow their guide on how to add plugins to your configuration. But before adding plugins you might want to disable some plugins that come with neocim and are not used, these are:
+```
+"netrw",
+"netrwPlugin",
+"netrwSettings",
+"netrwFileHandlers",
+"gzip",
+"zip",
+"zipPlugin",
+"tar",
+"tarPlugin",
+"getscript",
+"getscriptPlugin",
+"vimball",
+"vimballPlugin",
+"2html_plugin",
+"logipat",
+"rrhelper",
+"spellfile_plugin",
+"matchit",
+```
+
+# Some notes and resources
 <div align="center">
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-sam-mgr.gif width="500" height="280" />
 </div>
-(TODO)
+
+Congratz, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser spotify and nvim open instead of having 4gb+ ram usage while idle and not only that but you are entitle to say "I use Arch linux btw" to every person you talk to.
+
+Hope this guide helped you in your process. If you have found anything that's not clear or wrong please let me know, I'll be updating it every now and then.
+
+## Notes
+You might want to have gaps in between the windows. To do so add this to your i3 config file and change it based on your taste:
+```
+gaps inner 10
+gaps outer 0
+smart_gaps on
+```
+
+Also, to eliminate the unwanted topbar created by i3 add this too:
+```
+default_border pixel 2
+default_floating_border pixel 2
+```
+
+## Resources
+Here are some resources that you might find useful for continuing your ricing journey.
+- [R/unixporn](https://www.reddit.com/r/unixporn/) the home for *NIX customization
+- [Arch linux webpage](https://archlinux.org/)
+- [Eric Murphy](https://www.youtube.com/@EricMurphyxyz) youtube channel.
+- chrisatmachine [Youtube](https://www.youtube.com/@chrisatmachine) and [Github](https://github.com/ChristianChiarulli) for neovim configurations and plugins.
