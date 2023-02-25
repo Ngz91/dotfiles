@@ -419,7 +419,7 @@ To install plugins there are various plugins managers, but the two most populars
 yay -S nvim-packer-git
 ```
 
-Follow their guide on how to add plugins to your configuration. But before adding plugins you might want to disable some plugins that come with neocim and are not used, these are:
+Follow their guide on how to add plugins to your configuration. But before adding plugins you might want to disable some plugins that come with neovim and are not used, these are:
 ```
 "netrw",
 "netrwPlugin",
