@@ -143,6 +143,13 @@ options snd-hda-intel vid=8086 pid=8ca0 snoop=0
 options snd-intel8x0 ac97_clock=48000
 ```
 
+You might also wanna intall Alsamixer to control your audio devices and settings.
+```
+sudo pacman -S alsamixer
+```
+
+Open it and check if auto mute is enabled. Check [here](https://askubuntu.com/questions/131857/alsamixer-howto-disable-auto-mute-mode) for instructions.
+
 Also, install these packages, they will be needed.
 ```
 sudo pacman -S ripgrep fzf xsel nodejs npm lazygit git python-pip thunar-archive-plugin zip
@@ -446,7 +453,7 @@ Follow their guide on how to add plugins to your configuration. But before addin
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-sam-mgr.gif width="500" height="280" />
 </div>
 
-Congratz, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser spotify and nvim open instead of having 4gb+ ram usage while idle and not only that but you are entitle to say "I use Arch linux btw" to every person you talk to.
+Congratz, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser spotify and nvim open instead of having 4gb+ ram usage while idle and not only that but you are entitled to say "I use Arch linux btw" to every person you talk to.
 
 Hope this guide helped you in your process. If you have found anything that's not clear or wrong please let me know, I'll be updating it every now and then.
 
