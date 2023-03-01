@@ -109,7 +109,7 @@ feh --bg-scale $HOME/Downloads/some-example-image.jpg
 
 To make this changes permanent nevigate to .config/i3 on your terminal and open in vim the config file that's there. Then add these lines to the end of the file. (If you don't know how to use vim use [this cheat sheet](https://vim.rtorr.com/))
 ```
-exec --no-startup-id xrandr --output *screen-name* --mode 1920x1080
+exec --no-startup-id xrandr --output *screen-name* --mode "resolution here"
 exec --no-startup-id feh --bg-scale $HOME/Downloads/some-example-image.jpg
 ```
 
