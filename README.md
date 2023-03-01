@@ -70,9 +70,9 @@ Select the options that better work for you, but in my case and configuration th
 
 After cheking that the options are correct select Install. Go for a coffee :coffee: and wait.
 
-After finishing the installation it will ask you if you'll like to chroot into the newly created installation. Select no and shutdown the machine running:
+After finishing the installation it will ask you if you'll like to chroot into the newly created installation. Select no and reboot the machine by running:
 ```
-shutdown now
+reboot
 ```
 Boot into Arch and you should be greeted by the login manager. If you installed Arch in a virtual machine remember to remove the ISO file before booting into the machine again.
 
@@ -101,7 +101,7 @@ Next, run this command to sync and upgrade Arch packages:
 sudo pacman -Syu
 ```
 
-Also, if you wish to change your wallpaper run this commands:
+Also, if you wish to change your wallpaper run these commands:
 ```
 sudo pacman -S feh
 feh --bg-scale $HOME/Downloads/some-example-image.jpg
@@ -147,7 +147,7 @@ options snd-hda-intel vid=8086 pid=8ca0 snoop=0
 options snd-intel8x0 ac97_clock=48000
 ```
 
-You might also wanna intall Alsamixer to control your audio devices and settings.
+You might also wanna install Alsamixer to control your audio devices and settings.
 ```
 sudo pacman -S alsamixer
 ```
@@ -469,11 +469,13 @@ gaps outer 0
 smart_gaps on
 ```
 
-Also, to eliminate the unwanted topbar created by i3 add this too:
+Also, to eliminate the topbar created by i3 add this too:
 ```
 default_border pixel 2
 default_floating_border pixel 2
 ```
+
+Remember to use Git to manager your .config folder, that way, if you mess up something, you can revert to a working commit.
 
 ## Resources
 Here are some resources that you might find useful for continuing your ricing journey.
