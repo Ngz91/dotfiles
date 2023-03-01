@@ -195,7 +195,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id xrandr --output Virtual1 --mode 1920x1080
+exec --no-startup-id xrandr --output Virtual1 --mode 1360x768
 exec --no-startup-id killall back4.sh 
 exec --no-startup-id sh back4.sh 0.025 ~/.config/gifs/room-animated.gif
 exec --no-startup-id sh ~/.config/polybar/launch.sh
