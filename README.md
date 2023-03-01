@@ -34,7 +34,7 @@
 
 # Installation Guide (WIP)
 
-First install Arch linux following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the archinstall package to automate the installation process.
+First install Arch linux following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the ArchInstall package to automate the installation process.
 
 To install Arch using The ArchInstall package check your internet connection first by running:
 ```
@@ -48,7 +48,7 @@ python -m archinstall --script guided
 You'll see a promp giving you some options similar to this:
 ![](https://raw.githubusercontent.com/Ngz91/dotfiles/master/screenshots/archinstall-example.jpg)
 
-Select the options that better work for you but for my case and configuration the options are:
+Select the options that better work for you, but in my case and configuration these are the options:
 - language: English
 - keyboard layout: us
 - mirror region: Worldwide
@@ -68,7 +68,13 @@ Select the options that better work for you but for my case and configuration th
 - automatic time synch: true
 - Additional repos: multilib
 
-After cheking that the options are correct select Install.
+After cheking that the options are correct select Install. Go for a coffee :coffee: and wait.
+
+After finishing the installation it will ask you if you'll like to chroot into the newly created installation. Select no and shutdown the machine running:
+```
+shutdown now
+```
+Boot into Arch and you should be greeted by the login manager. If you installed Arch in a virtual machine remember to remove the ISO file before booting into the machine again.
 
 Congrats Arch is now installed :tada:
 
@@ -79,20 +85,18 @@ Congrats Arch is now installed :tada:
 
 </div>
 
-If you installed Arch in a virtual machine remember to remove the ISO file.
-
-After booting into session you will see a black screen and a bar at the bottom of the screen, all in the incorrect resolution. i3 will then ask if you want a configuration to be created for you, select yes and this will create a configuration file at .config/i3 named config where you can add your keybindings, exec commands, etc. If you want to familiarize yourself with the i3 WM I recommend reading their [user guide](https://i3wm.org/docs/userguide.html).
+After booting into session you will see a black screen and a bar at the bottom of the screen, all in the incorrect resolution. i3 will then ask if you want a configuration to be created for you, select `Yes` and this will create a configuration file at .config/i3 named config where you can add your keybindings, exec commands, etc. If you want to familiarize yourself with the i3WM I recommend reading their [user guide](https://i3wm.org/docs/userguide.html).
 
 To fix the resolution open your terminal with Mod+enter and run this command (The Mod key is most likely your Windows key):
 ```
 xrandr
 ```
-This will give you a list with different screens and their resolution, select the one you wish to use and run this command:
+This will give you a list with different screens and their resolutions, select the one that you wish to use and run this command:
 ```
-xrandr --output *screen name here* --mode 1920x1080
+xrandr --output *screen name here* --mode "resolution here"
 ```
 
-Next, run this command to synch and upgrade Arch packages:
+Next, run this command to sync and upgrade Arch packages:
 ```
 sudo pacman -Syu
 ```
@@ -100,16 +104,16 @@ sudo pacman -Syu
 Also, if you wish to change your wallpaper run this commands:
 ```
 sudo pacman -S feh
-feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
+feh --bg-scale $HOME/Downloads/some-example-image.jpg
 ```
 
 To make this changes permanent nevigate to .config/i3 on your terminal and open in vim the config file that's there. Then add these lines to the end of the file. (If you don't know how to use vim use [this cheat sheet](https://vim.rtorr.com/))
 ```
 exec --no-startup-id xrandr --output *screen-name* --mode 1920x1080
-exec --no-startup-id feh --bg-scale $HOME*/Downloads/some-example-image.jpg*
+exec --no-startup-id feh --bg-scale $HOME/Downloads/some-example-image.jpg
 ```
 
-Also, you might want to assign a keybind to firefox. To do so, paste this line into your configuration (the location does not matter but it's a good idea to put all your keybindings after kill focused window keybind, that way it's easier to spot them in the file).
+Also, you might want to assign a keybind for opening a firefox window. To do so, paste this line into your configuration (the location does not matter but it's a good idea to put all your keybindings after the `kill focused window` keybind, that way it's easier to spot them in the file).
 ```
 bindsym $mod+Shift+b exec firefox --new-window
 ```
