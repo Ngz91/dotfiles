@@ -170,7 +170,7 @@ sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/yogurt-anime.gif width="500" height="280" />
 </div>
 
-Yay is an AUR Helper Written in Go. We will use it to install some packages that are not in the official package repo or the version that is it's outdated. Visit the official [github repository](https://github.com/Jguer/yay) for the installation steps or run this command:
+Yay is an AUR (Arch User Repository) helper written in Go. We will use it to install some packages that are not in the official package repo or the version that is it's outdated. Visit the official [github repository](https://github.com/Jguer/yay) for the installation steps or run this command:
 ```
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
@@ -190,7 +190,7 @@ Then change the i3 configuration to open kitty instead of the default terminal b
 ```
 bindsym $mod+Return exec kitty
 ```
-You can change kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of interest.
+You can change kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of your interest.
 
 ## Nerd Fonts installation
 
