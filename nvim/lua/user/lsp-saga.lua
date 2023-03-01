@@ -8,7 +8,7 @@ lspsaga.setup({
   symbol_in_winbar = {
     enable = false,
   },
-	code_action_lightbulb = {
+	lightbulb = {
 		enable = false,
 		sign = false,
 		enable_in_insert = false,
