@@ -38,7 +38,7 @@ First install Arch linux following the installation steps in the Arch linux [off
 
 To install Arch using The ArchInstall package check your internet connection first by running:
 ```
-ping https://archlinux.org/
+ping -c 5 https://archlinux.org/
 ```
 And then run this command:
 ```
@@ -198,9 +198,9 @@ You can change kitty's theme in .config/kitty/kitty.conf. Add my configuration o
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-smile.gif width="500" height="280" />
 </div>
 
-Nerd fonts add glyphs and icons to your terminal, this will allow, for example, Neovim to render icons. Visit [their page](https://www.nerdfonts.com/) to learn more about them. We will need to install some of them, you can install and use any one that you want, but to install them I'll use the ones I use for my configuration.
+Nerd fonts add glyphs and icons to your terminal, this will allow, for example, Neovim to render icons. Visit [their page](https://www.nerdfonts.com/) to learn more about them. We will need to install some of them, you can install and use any one that you like. I'll use the ones I use in my configuration as an example installation procedure.
 
-First make a .fonts folder in the same directory where .config is, then download [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip), [Products Sans](https://github.com/iamverysimp1e/fonts/raw/master/product-sans.zip) and all [Material Design Icons](https://github.com/google/material-design-icons/tree/master/variablefont) except the ones that end with .codepoints. Unpack them and place them in place them into `~/.fonts` or `~/.local/share/fonts.` Then run this command for your system to detect the new fonts:
+First make a .fonts folder in the same directory where .config is, then download [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip), [Products Sans](https://github.com/iamverysimp1e/fonts/raw/master/product-sans.zip) and all [Material Design Icons](https://github.com/google/material-design-icons/tree/master/variablefont) except the ones that end with .codepoints. Unpack them and place them into `~/.fonts` or `~/.local/share/fonts.` Then run this command for your system to detect the new fonts:
 ```
 fc-cache -fv
 ```
@@ -225,7 +225,7 @@ And finally install Oh-my-szh by running
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-It will ask you if you want to make zsh your default shell, select yes. Exit your terminal and launch it again and you will see the terminal in a different style.
+It will ask you if you want to make zsh your default shell, select `yes`. Exit your terminal and launch it again and you will see the terminal in a different style.
 
 To change the theme of oh-my-zsh change this line in ~/.zshrc
 ```
@@ -457,7 +457,7 @@ Follow their guide on how to add plugins to your configuration. But before addin
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-sam-mgr.gif width="500" height="280" />
 </div>
 
-Congratz, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser spotify and nvim open instead of having 4gb+ ram usage while idle and not only that but you are entitled to say "I use Arch linux btw" to every person you talk to.
+Congrats, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser spotify and nvim open instead of having 4gb+ ram usage while idle and not only that but you are entitled to say "I use Arch linux btw" to every person you talk to.
 
 Hope this guide helped you in your process. If you have found anything that's not clear or wrong please let me know, I'll be updating it every now and then.
 
