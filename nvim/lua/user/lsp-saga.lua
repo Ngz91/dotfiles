@@ -6,7 +6,8 @@ end
 lspsaga.setup({
 	server_filetype_map = {},
   symbol_in_winbar = {
-    enable = false,
+    enable = true,
+    separator = "  ",
   },
 	lightbulb = {
 		enable = false,
