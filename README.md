@@ -213,7 +213,7 @@ fc-cache -fv
 
 </div>
 
-Zsh is a Unix Shell, we will use it in combination with Oh-my-zsh to customize our terminal. Install Zsh by running:
+Zsh is a Unix Shell, we will use it in combination with Oh-my-zsh to customize the terminal. Install Zsh by running:
 ```
 sudo pacman -S zsh zsh-completions
 ```
@@ -221,11 +221,11 @@ Change your default shell by running
 ```
 chsh -s /bin/zsh
 ```
-And finally install Oh-my-szh by running
+And finally install Oh-my-zsh by running
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-It will ask you if you want to make zsh your default shell, select `yes`. Exit your terminal and launch it again and you will see the terminal in a different style.
+It will ask you if you want to make zsh your default shell, select `yes`. Exit your terminal, launch it again and you will see the terminal in a different style.
 
 To change the theme of oh-my-zsh change this line in ~/.zshrc
 ```
@@ -238,13 +238,15 @@ source .zshrc
 
 You can find all available Oh-my-zsh themes [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes).
 
+Note: There are other themes that are not in the aforementioned repository that can be installed and used. Their installation will not be explained in this guide.
+
 ## Picom
 
 <div align="center">
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/disappearing.gif width="500" height="280" />
 </div>
 
-Picom is a window compotior, in our case it will let us have transparent windows. Install it by running:
+Picom is a window compositor, in our case we will use it to make some of our windows  transparent. Install it by running:
 ```
 sudo pacman -S picom
 ```
@@ -254,24 +256,24 @@ To modify Picom behavior create or edit the picom.conf file at .config folder, i
 ```
 xprop
 ```
-Click on the window that you want to apply the transparency and look for WM_CLASS(STRING), add this to your configuration. (I'll use kitty for this example)
+Click on the window that you want to apply the transparency and look for WM_CLASS(STRING). Then add this to your configuration. (I'll use kitty for this example)
 ```
 opacity-rule = [
     "85:class_g = 'kitty' && focused",
     "85:class_g = 'kitty' && !focused",
 ];
 ```
-This tells picom to follow this opacity rules for the specific program that's running. Now, the same rules can be applied if you don't want the window to have any transparency, for exaple, I don't want firefox to hae any opacity. To achieve that is add this to the conf file.
+This tells Picom to follow these opacity rules for the specific program that's running. Now, the same rules can be applied if you don't want the window to have any transparency, for example, I don't want firefox to have any opacity. To achieve this add this line to the opacity-rule in the conf file.
 ```
 "100:class_g = 'firefox'",
 ```
-As a side note, Picom uses backends for rendering, some of them handle features that others can't. The default one is xrender, but you can try others at your own risk. Here is a [manual](https://man.archlinux.org/man/picom.1.en) explaining other options available for configuration. In case Picom hangs your computer, open a console by pressing `Ctrl+Alt+F2`, log in and change the backend line.
+As a side note, Picom uses backends for rendering, some of them handle features that others can't. The default one is xrender, but you can try others at your own risk. Here is a [manual](https://man.archlinux.org/man/picom.1.en) explaining other options available for configuration. In case changing the Picom backend freezes your computer, open a console by pressing `Ctrl+Alt+F2`, log in and change the backend line.
 
 To run Picom on start up add this line to your i3 config file:
 ```
 exec --no-startup-id picom
 ```
-If you are having problems with picom configuration copy my conf file and from there edit what you want and what not.
+If you are having problems with your Picom configuration copy my conf file and from there edit what you want and what not.
 
 ## Rofi
 
@@ -284,7 +286,7 @@ Rofi is an App launcher, with it you can easily search and launch installed apps
 ```
 sudo pacman -S rofi
 ```
-Then run it using `rofi --show drun`
+Then run it using `rofi --show drun`. [Here](https://github.com/davatorium/rofi) you can read about other options to run rofi.
 
 Create a rofi folder in your config and [add this files](https://github.com/iamverysimp1e/dots/tree/main/configs/rofi), this will give you a start for you to customize your own rofi theme.
 
@@ -305,7 +307,7 @@ Polybar is a highly customizable status bar. Install it by running:
 ```
 sudo pacman -S polybar
 ```
-Then create a polybar folder in .config to hold your configuration. Polybar configuration deserves a guide on it's own but you can set one basic one following this steps. First copy my polybar config files to your polybar folder. In the same folder grand permissions to these files:
+Then create a polybar folder in .config to hold your configuration. Polybar configuration deserves a guide on it's own but you can set a basic one following these steps. First copy my polybar config files to your polybar folder. In the same folder grand permissions to these files:
 ```
 chmod +x launch.sh
 chmod u+x scripts/diskusage
@@ -337,9 +339,9 @@ Some notes. If you want ranger to preview the images in kitty you'll need to ins
 ```
 pip install pillow
 ```
-If there's a warning telling you that "The script x is installed in '/home/myusername/.local/bin' which is not on PATH" then add it. For zsh add `export PATH=$PATH:/home/username/.local/bin` to the end of .zshrc.
+If there's a warning telling you that "The script x is installed in '/home/myusername/.local/bin' which is not on PATH" then add it. For zsh add `export PATH=$PATH:/home/username/.local/bin` at the end of .zshrc.
 
-Also if you want zathura to show the pdf page with it's original colors then set recolor to false in the configuration file. `set recolor "false"`
+Also if you want zathura to show the pdf page with it's original colors set recolor to false in the configuration file. `set recolor "false"`
 
 You can assign ranger a keybind similar to this
 ```
