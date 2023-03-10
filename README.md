@@ -307,7 +307,7 @@ Polybar is a highly customizable status bar. Install it by running:
 ```
 sudo pacman -S polybar
 ```
-Then create a polybar folder in .config to hold your configuration. Polybar configuration deserves a guide on it's own but you can set a basic one following these steps. First copy my polybar config files to your polybar folder. In the same folder grand permissions to these files:
+Then create a polybar folder in .config to hold your configuration. Polybar configuration deserves a guide on it's own but you can set a basic one following these steps. First copy my polybar config files into your polybar folder. In the same folder grand permissions to these files:
 ```
 chmod +x launch.sh
 chmod u+x scripts/diskusage
@@ -319,7 +319,7 @@ Then add this to your i3 config file:
 exec --no-startup-id sh ~/.config/polybar/launch.sh
 ```
 
-Polybar is pretty well documented, you can read the documentation in [their repository](https://github.com/polybar/polybar/wiki/) if you have any doubt on how to use it or customize it.
+Polybar is pretty well documented, you can read the documentation in [their repository](https://github.com/polybar/polybar/wiki/) if you have any doubt about how to use it or how to customize it.
 
 ## Ranger and Zathura
 
@@ -353,21 +353,21 @@ bindsym $mod+Shift+v exec kitty -e ranger
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/persona-persona3.gif width="500" height="280" />
 </div>
 
-Install spotify using the package in Arch repo (Do not use Snap package since spicetify it's not gonna work with it)
+Install spotify using the package in Arch repo (Do not use Snap package since Spicetify it's not gonna work with it)
 ```
 sudo pacman -S spotify-launcher
 ```
-Open it and log. Check your audio. Close it and install spicetify-cli, we will use it to customize Spotify theme. Install it by running:
+Open it and log in. Check your audio. Close it and install spicetify-cli, we will use it to customize Spotify theme and add extensions. Install it by running or follow their [guide](https://spicetify.app/docs/advanced-usage/installation/):
 ```
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
 ```
-Navigate to the Spicetify folder in your .config folder and open config-zpui.ini. Here you will modify spotify_path and prefs_path. Their [official guide](https://spicetify.app/docs/advanced-usage/installation/) tells you how to find both paths but in my case it's they look like this:
+Navigate to the Spicetify folder in your .config folder and open config-zpui.ini. Here you will modify spotify_path and prefs_path. Their [official guide](https://spicetify.app/docs/advanced-usage/installation/) tells you how to find both paths but in my case they look like this:
 ```
 spotify_path  = /home/ngz91/.local/share/spotify-launcher/install/usr/share/spotify/
 prefs_path    = /home/ngz91/.config/spotify/prefs
 ```
 
-After this you can change your own theme with this command (I recommend doing this inside the spicetify Themes folder):
+After this, you can change your own theme using this command (I recommend doing this inside the spicetify Themes folder):
 ```
 spicetify config current_theme "Path_to_your_configuration"
 ```
@@ -391,16 +391,18 @@ bindsym $mod+Shift+m exec spotify-launcher
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/coding-anime.gif width="500" height="280" />
 </div>
 
-Neovim is a terminal based text editor, it's greatly powerfull and very hard to configure if you don't know what you are doing. I recommend using a neovim premade configuration before making your own, or you can configure one yourself by following Tatsuya Matsuyama [video](https://www.youtube.com/watch?v=ajmK0ZNcM4Q), that way you can get an understanding of how neovim configurations work and change or add things on your own.
+Neovim is a terminal based text editor, it's extremely powerful and customizable, and very hard to configure if you don't know what you are doing. I recommend using a neovim premade configuration before making your own, or you can configure one yourself by following Tatsuya Matsuyama [video](https://www.youtube.com/watch?v=ajmK0ZNcM4Q), that way you can get a starting minimal configuration and also get an understanding of how neovim configurations work.
 
 Some good premade configurations are:
 - [LunarVim](https://github.com/LunarVim/LunarVim)
 - [LazyVim](https://github.com/LazyVim/LazyVim)
 - [NvChad](https://github.com/NvChad/NvChad)
 
+They are all community maintained and very stable.
+
 The main language used for configuring neovim is Lua. You can familiarize yourself with the language by watching [this video](https://www.youtube.com/watch?v=1srFmjt1Ib0), but by knowing the basics you can make your own configuration.
 
-Neovim configuration folder structure looks something like this:
+A Neovim configuration folder structure looks something like this:
 
 ```
 ├── init.lua
@@ -423,11 +425,11 @@ Neovim configuration folder structure looks something like this:
     └── packer_compiled.lua
 ```
 
-init.lua is where the first file neovim loads, here you can require other files where the plugin configuration is.  lua/user is where your lua scripts and plugins configurations are, you can require them in init.lua by using the require function `require("user.plugin1")`. There's also a lsp(language server protocol) folder where all lsp configuration lies, here we can configure our language servers and lsp based plugins like lsp-saga, illuminate, etc.
+init.lua is the first file neovim loads, here you can require other files with the plugins configurations or scripts that you wanna run. lua/user is where your Lua scripts and plugins configurations are, you can require them in init.lua by using the require function `require("user.plugin1")`. There's also a lsp(language server protocol) folder where all lsp configuration lies, here you can configure your language servers and lsp based plugins like lsp-saga, illuminate, etc.
 
-NOTE: This is not a standard, there are various ways this folder can be structured, but this one is very easy to understand.
+<b>NOTE:</b> This is not a standard, there are various ways this folder can be structured, but this one is very easy to understand.
 
-To install plugins there are various plugins managers, but the two most populars are [Packer.nvim](https://github.com/wbthomason/packer.nvim) and [lazy.nvim](https://github.com/folke/lazy.nvim). To install packer run:
+To install plugins there are various plugins managers, but the two most popular are [Packer.nvim](https://github.com/wbthomason/packer.nvim) and [lazy.nvim](https://github.com/folke/lazy.nvim). If you go with Packer theres an AUR package available, this will take care of the configuration for you:
 ```
 yay -S nvim-packer-git
 ```
@@ -454,17 +456,19 @@ Follow their guide on how to add plugins to your configuration. But before addin
 "matchit",
 ```
 
+[This guide](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f) is one of the most complete guides there are for configuring Neovim, if you have any doubt most likely the answer can be found there. Visit the [Neovim reddit](https://www.reddit.com/r/neovim/) forum if you have any doubt, it's a very open and welcoming community.
+
 # Some notes and resources
 <div align="center">
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-sam-mgr.gif width="500" height="280" />
 </div>
 
-Congrats, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser spotify and nvim open instead of having 4gb+ ram usage while idle and not only that but you are entitled to say "I use Arch linux btw" to every person you talk to.
+Congrats, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser, spotify and Neovim open instead of having 4gb+ ram usage while idle. And not only that but you are entitled to say "I use Arch linux btw" to every person you talk to.
 
-Hope this guide helped you in your process. If you have found anything that's not clear or wrong please let me know, I'll be updating it every now and then.
+Hope this guide helped you in your configuration process. If you have found anything that's not clear or wrong, please let me know, I'll be updating this guide every now and then.
 
 ## Notes
-You might want to have gaps in between the windows. To do so add this to your i3 config file and change it based on your taste:
+You might want to have gaps in between the windows. To do so, add this to your i3 config file and change it based on your preference:
 ```
 gaps inner 10
 gaps outer 0
