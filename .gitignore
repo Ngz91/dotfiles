@@ -14,7 +14,10 @@ spicetify/Extracted/
 rofi/applets/
 rofi/colors/
 rofi/images/
-rofi/launchers/
+rofi/launchers/*
+!rofi/launchers/type-7/
+rofi/launchers/type-7/*
+!rofi/launchers/type-7/style-2.rasi
 rofi/powermenu/
 rofi/scripts/
 systemd/user/
