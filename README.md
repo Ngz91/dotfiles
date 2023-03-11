@@ -30,7 +30,7 @@
 - Launcher:        [Rofi](https://github.com/davatorium/rofi)
 - Compositor:      [Picom](https://github.com/yshui/picom)
 - File Manager:    [Ranger](https://github.com/ranger/ranger)
-- IDE:             [Nvim](https://neovim.io/)
+- IDE:             [Neovim](https://neovim.io/)
 
 # Installation Guide (WIP)
 
@@ -76,7 +76,7 @@ reboot
 ```
 Boot into Arch and you should be greeted by the login manager. If you installed Arch in a virtual machine remember to remove the ISO file before booting into the machine again.
 
-Congrats Arch is now installed :tada:
+Congrats, Arch is now installed :tada:
 
 # Configuring Arch
 <div align="center">
@@ -186,11 +186,11 @@ Kitty is a GPU based terminal emulator. Install it by running:
 sudo pacman -S kitty
 ```
 
-Then change the i3 configuration to open kitty instead of the default terminal by adding this line to the i3 config file
+Then change the i3 configuration to open Kitty instead of the default terminal by adding this line to the i3 config file
 ```
 bindsym $mod+Return exec kitty
 ```
-You can change kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of your interest.
+You can change Kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of your interest.
 
 ## Nerd Fonts installation
 
@@ -225,9 +225,9 @@ And finally install Oh-my-zsh by running
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-It will ask you if you want to make zsh your default shell, select `yes`. Exit your terminal, launch it again and you will see the terminal in a different style.
+It will ask you if you want to make Zsh your default shell, select `yes`. Exit your terminal, launch it again and you will see the terminal in a different style.
 
-To change the theme of oh-my-zsh change this line in ~/.zshrc
+To change the theme of Oh-my-zsh change this line in ~/.zshrc
 ```
 ZSH_THEME="robbyrussel"
 ```
@@ -256,14 +256,14 @@ To modify Picom behavior create or edit the picom.conf file at .config folder, i
 ```
 xprop
 ```
-Click on the window that you want to apply the transparency and look for WM_CLASS(STRING). Then add this to your configuration. (I'll use kitty for this example)
+Click on the window that you want to apply the transparency and look for WM_CLASS(STRING). Then add this to your configuration. (I'll use Kitty for this example)
 ```
 opacity-rule = [
     "85:class_g = 'kitty' && focused",
     "85:class_g = 'kitty' && !focused",
 ];
 ```
-This tells Picom to follow these opacity rules for the specific program that's running. Now, the same rules can be applied if you don't want the window to have any transparency, for example, I don't want firefox to have any opacity. To achieve this add this line to the opacity-rule in the conf file.
+This tells Picom to follow these opacity rules for the specific program that's running. Now, the same rules can be applied if you don't want the window to have any transparency, for example, I don't want Firefox to have any opacity. To achieve this add this line to the opacity-rule in the conf file.
 ```
 "100:class_g = 'firefox'",
 ```
@@ -288,11 +288,11 @@ sudo pacman -S rofi
 ```
 Then run it using `rofi --show drun`. [Here](https://github.com/davatorium/rofi) you can read about other options to run rofi.
 
-Create a rofi folder in your config and [add this files](https://github.com/iamverysimp1e/dots/tree/main/configs/rofi), this will give you a start for you to customize your own rofi theme.
+Create a rofi folder in your config and [add this files](https://github.com/iamverysimp1e/dots/tree/main/configs/rofi), this will give you a start for you to customize your own Rofi theme.
 
-In case you want a rofi theme similar to mine follow [this guide](https://github.com/adi1090x/rofi)
+In case you want a Rofi theme similar to mine follow [this guide](https://github.com/adi1090x/rofi)
 
-To assign rofi a keybinding add this to your i3 config file:
+To assign Rofi a keybinding add this to your i3 config file:
 ```
 exec --no-startup-id sh rofi -show drun
 ```
@@ -307,7 +307,7 @@ Polybar is a highly customizable status bar. Install it by running:
 ```
 sudo pacman -S polybar
 ```
-Then create a polybar folder in .config to hold your configuration. Polybar configuration deserves a guide on it's own but you can set a basic one following these steps. First copy my polybar config files into your polybar folder. In the same folder grand permissions to these files:
+Then create a polybar folder in .config to hold your configuration. Polybar configuration deserves a guide on it's own but you can set a basic one following these steps. First copy my Polybar config files into your folder. In the same folder, grand permissions to these files:
 ```
 chmod +x launch.sh
 chmod u+x scripts/diskusage
@@ -333,17 +333,17 @@ To install both programs run:
 ```
 sudo pacman -S zathura ranger
 ```
-Then create their respective folders inside .config. You can copy my ranger configuration, it will give you something to start with. Same for the zathura configuration.
+Then create their respective folders inside .config. You can copy my Ranger configuration, it will give you something to start with. Same for the Zathura configuration.
     
-Some notes. If you want ranger to preview the images in kitty you'll need to install pillow by using this command:
+Some notes. If you want ranger to preview the images in Kitty you'll need to install Pillow by using this command:
 ```
 pip install pillow
 ```
-If there's a warning telling you that "The script x is installed in '/home/myusername/.local/bin' which is not on PATH" then add it. For zsh add `export PATH=$PATH:/home/username/.local/bin` at the end of .zshrc.
+If there's a warning telling you that "The script x is installed in '/home/myusername/.local/bin' which is not on PATH" then add it. For Zsh add `export PATH=$PATH:/home/username/.local/bin` at the end of .zshrc.
 
-Also if you want zathura to show the pdf page with it's original colors set recolor to false in the configuration file. `set recolor "false"`
+Also if you want Zathura to show the pdf page with it's original colors set recolor to false in the configuration file. `set recolor "false"`
 
-You can assign ranger a keybind similar to this
+You can assign Ranger a keybind similar to this
 ```
 bindsym $mod+Shift+v exec kitty -e ranger
 ```
