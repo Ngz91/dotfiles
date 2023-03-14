@@ -22,15 +22,18 @@
 
 # Details:
 
-- OS:              [Arch](https://archlinux.org/)
-- WM:              [i3](https://i3wm.org/)
-- Terminal:        [Kitty](https://sw.kovidgoyal.net/kitty/)
-- Shell:           [Zsh](https://www.zsh.org/)
-- Status Bar:      [Polybar](https://polybar.github.io/)
-- Launcher:        [Rofi](https://github.com/davatorium/rofi)
-- Compositor:      [Picom](https://github.com/yshui/picom)
-- File Manager:    [Ranger](https://github.com/ranger/ranger)
-- IDE:             [Neovim](https://neovim.io/)
+| Class | Tool |
+------|------
+| OS                 |   [Arch](https://archlinux.org/) :sushi: |
+| WM                 |   [i3](https://i3wm.org/) :sparkler: |
+| Terminal           |   [Kitty](https://sw.kovidgoyal.net/kitty/) :cat: |
+| Shell              |   [Zsh](https://www.zsh.org/) :milky_way: |
+| Status Bar         |   [Polybar](https://polybar.github.io/) :hammer_and_pick: |
+| Launcher           |   [Rofi](https://github.com/davatorium/rofi) :rocket:|
+| Compositor         |   [Picom](https://github.com/yshui/picom) :comet: |
+| File Manager       |   [Ranger](https://github.com/ranger/ranger) :file_folder: |
+| Document Reader    |   [Zathura](https://pwmt.org/projects/zathura/) :notebook_with_decorative_cover: |
+| IDE                |   [Neovim](https://neovim.io/) :computer: |
 
 # Installation Guide (WIP)
 
