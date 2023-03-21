@@ -16,4 +16,7 @@ lspsaga.setup({
 		sign_priority = 20,
 		virtual_text = false,
 	},
+  beacon = {
+    enable = false;
+  }
 })
