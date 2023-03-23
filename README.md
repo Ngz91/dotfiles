@@ -159,7 +159,7 @@ Open it and check if auto mute is enabled. Check [here](https://askubuntu.com/qu
 
 Also, install these packages, they will be needed.
 ```
-sudo pacman -S ripgrep fzf xsel nodejs npm lazygit git python-pip thunar-archive-plugin zip
+sudo pacman -S ripgrep fzf xsel nodejs npm lazygit git python-pip thunar-archive-plugin zip stylua
 ```
 
 To render japanese characters install these packages
