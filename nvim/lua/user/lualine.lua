@@ -83,7 +83,7 @@ end
 
 ins_left({
 	function()
-		return "▊"
+		return ""
 	end,
 	color = { fg = colors.blue }, -- Sets highlighting of component
 	padding = { left = 0, right = 1 }, -- We don't need space before this
@@ -126,6 +126,7 @@ ins_left({
 ins_left({
 	"filename",
 	cond = conditions.buffer_not_empty,
+  separator = { left = "", right = "" },
 	color = { fg = colors.magenta, gui = "bold" },
 })
 
@@ -208,7 +209,7 @@ ins_right({
 
 ins_right({
 	function()
-		return "▊"
+		return ""
 	end,
 	color = { fg = colors.blue },
 	padding = { left = 1 },
