@@ -402,14 +402,14 @@ bindsym $mod+Shift+m exec spotify-launcher
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/coding-anime.gif width="500" height="280" />
 </div>
 
-Neovim is a terminal based text editor, it's extremely powerful and customizable, and very hard to configure if you don't know what you are doing. I recommend using a neovim premade configuration before making your own, or you can configure one yourself by following Tatsuya Matsuyama [video](https://www.youtube.com/watch?v=ajmK0ZNcM4Q), that way you can get a starting minimal configuration and also get an understanding of how neovim configurations work.
+Neovim is a terminal based text editor, it's extremely powerful and customizable, and very hard to configure if you don't know what you are doing. I recommend using a neovim premade configuration before making your own, or you can configure one yourself by following Tatsuya Matsuyama [video](https://www.youtube.com/watch?v=ajmK0ZNcM4Q), that way you can get a starting minimal configuration and also get an understanding of how Neovim configurations work.
 
 Some good premade configurations are:
 - [LunarVim](https://github.com/LunarVim/LunarVim)
 - [LazyVim](https://github.com/LazyVim/LazyVim)
 - [NvChad](https://github.com/NvChad/NvChad)
 
-They are all community maintained and very stable.
+These are all community maintained and very stable.
 
 The main language used for configuring neovim is Lua. You can familiarize yourself with the language by watching [this video](https://www.youtube.com/watch?v=1srFmjt1Ib0), but by knowing the basics you can make your own configuration.
 
@@ -440,7 +440,7 @@ init.lua is the first file neovim loads, here you can require other files with t
 
 <b>NOTE:</b> This is not a standard, there are various ways this folder can be structured, but this one is very easy to understand.
 
-To install plugins there are various plugins managers, but the two most popular are [Packer.nvim](https://github.com/wbthomason/packer.nvim) and [lazy.nvim](https://github.com/folke/lazy.nvim). If you go with Packer theres an AUR package available, this will take care of the configuration for you:
+To install plugins there are various plugins managers, but the two most popular are [Packer.nvim](https://github.com/wbthomason/packer.nvim) and [lazy.nvim](https://github.com/folke/lazy.nvim). If you go with Packer there's an [AUR package](https://aur.archlinux.org/packages/nvim-packer-git) available, this will take care of the configuration for you:
 ```
 yay -S nvim-packer-git
 ```
