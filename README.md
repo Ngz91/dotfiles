@@ -495,7 +495,7 @@ default_border pixel 2
 default_floating_border pixel 2
 ```
 
-Remember to use Git to manager your .config folder, that way, if you mess up something, you can revert to a working commit.
+Remember to use Git to manage your .config folder, that way, if you mess up something, you can revert to a working commit.
 
 ## Resources
 Here are some resources that you might find useful for continuing your ricing journey.
