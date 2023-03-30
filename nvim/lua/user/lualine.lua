@@ -83,7 +83,7 @@ end
 
 ins_left({
 	function()
-		return ""
+		return " "
 	end,
 	color = { fg = colors.blue }, -- Sets highlighting of component
 	padding = { left = 0, right = 1 }, -- We don't need space before this
@@ -120,19 +120,27 @@ ins_left({
 		}
 		return { fg = mode_color[vim.fn.mode()] }
 	end,
-	padding = { right = 1 },
+	padding = { right = 2 },
 })
 
 ins_left({
 	"filename",
 	cond = conditions.buffer_not_empty,
-  separator = { left = "", right = "" },
-	color = { fg = colors.magenta, gui = "bold" },
+	separator = { right = "" },
+	color = { fg = colors.darkblue, gui = "bold", bg = colors.magenta },
 })
 
-ins_left({ "location", color = { fg = colors.red, gui = "bold" } })
+ins_left({
+	"location",
+	separator = { left = "", right = "" },
+	color = { fg = colors.darkblue, gui = "bold", bg = colors.red },
+})
 
-ins_left({ "progress", color = { fg = colors.orange, gui = "bold" } })
+ins_left({
+	"progress",
+	separator = { left = "", right = "" },
+	color = { fg = colors.darkblue, gui = "bold", bg = colors.orange },
+})
 
 ins_left({
 	"diagnostics",
@@ -171,7 +179,8 @@ ins_right({
 		return msg
 	end,
 	icon = " LSP:",
-	color = { fg = "#11d93d", gui = "bold" },
+	separator = { left = "" },
+	color = { fg = colors.darkblue, gui = "bold", bg = "#11d93d" },
 })
 
 -- Add components to right sections
@@ -179,20 +188,23 @@ ins_right({
 	"o:encoding", -- option component same as &encoding in viml
 	fmt = string.upper, -- I'm not sure why it's upper case either ;)
 	cond = conditions.hide_in_width,
-	color = { fg = colors.green, gui = "bold" },
+	separator = { left = "" },
+	color = { fg = colors.darkblue, gui = "bold", bg = colors.blue },
 })
 
 ins_right({
 	"fileformat",
 	fmt = string.upper,
 	icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-	color = { fg = colors.green, gui = "bold" },
+	separator = { left = "" },
+	color = { fg = colors.darkblue, gui = "bold", bg = colors.green },
 })
 
 ins_right({
 	"branch",
 	icon = "",
-	color = { fg = colors.violet, gui = "bold" },
+	separator = { left = "" },
+	color = { fg = colors.darkblue, gui = "bold", bg = colors.violet },
 })
 
 ins_right({
@@ -205,14 +217,6 @@ ins_right({
 		removed = { fg = colors.red },
 	},
 	cond = conditions.hide_in_width,
-})
-
-ins_right({
-	function()
-		return ""
-	end,
-	color = { fg = colors.blue },
-	padding = { left = 1 },
 })
 
 -- Now don't forget to initialize lualine
