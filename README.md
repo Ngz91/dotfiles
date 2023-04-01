@@ -368,7 +368,7 @@ bindsym $mod+Shift+v exec kitty -e ranger
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/persona-persona3.gif width="500" height="280" />
 </div>
 
-Install spotify using the package in Arch repo (Do not use Snap package since Spicetify it's not gonna work with it)
+Install spotify using the package in Arch repo (Do not use Snap package since Spicetify is not gonna work with it)
 ```
 sudo pacman -S spotify-launcher
 ```
