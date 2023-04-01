@@ -37,7 +37,7 @@
 
 # Installation Guide (WIP)
 
-First install Arch linux by following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the ArchInstall package to automate the installation process. <b>IMPORTANT:</b> If you are installing Arch as a dual boot don't follow this method. Follow these two videos instead:
+First install Arch linux by following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the ArchInstall package to automate the installation process. <b>IMPORTANT:</b> If you are installing Arch as a dual boot don't follow this method. Follow one of these videos instead:
 
 - Manual [installation](https://www.youtube.com/watch?v=JRdYSGh-g3s)
 - ArchInstall [installation 1](https://www.youtube.com/watch?v=-Sz2W6k3HkM)
