@@ -40,8 +40,8 @@
 First install Arch linux by following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the ArchInstall package to automate the installation process. <b>IMPORTANT:</b> If you are installing Arch as a dual boot don't follow this method. Follow these two videos instead:
 
 - Manual [installation](https://www.youtube.com/watch?v=JRdYSGh-g3s)
-- ArchInstall [installation 1] (https://www.youtube.com/watch?v=-Sz2W6k3HkM)
-- ArchInstall [installation 2] (https://www.youtube.com/watch?v=RoTe4uAqIHA)
+- ArchInstall [installation 1](https://www.youtube.com/watch?v=-Sz2W6k3HkM)
+- ArchInstall [installation 2](https://www.youtube.com/watch?v=RoTe4uAqIHA)
 
 To install Arch using The ArchInstall package check your internet connection first by running:
 ```
