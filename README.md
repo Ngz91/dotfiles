@@ -87,6 +87,8 @@ Boot into Arch and you should be greeted by the login manager. If you installed 
 
 Congrats, Arch is now installed :tada:
 
+[Go back](#details) to details
+
 # Configuring Arch
 <div align="center">
 
