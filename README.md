@@ -368,7 +368,7 @@ bindsym $mod+Shift+v exec kitty -e ranger
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/persona-persona3.gif width="500" height="280" />
 </div>
 
-Install spotify using the package in Arch repo (Do not use Snap package since Spicetify is not gonna work with it)
+Install spotify using the package in Arch repo (Do not use the Snap package since Spicetify is not gonna work with it)
 ```
 sudo pacman -S spotify-launcher
 ```
@@ -376,7 +376,10 @@ Open it and log in. Check your audio. Close it and install spicetify-cli, we wil
 ```
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
 ```
-Navigate to the Spicetify folder in your .config folder and open config-zpui.ini. Here you will modify spotify_path and prefs_path. Their [official guide](https://spicetify.app/docs/advanced-usage/installation/) tells you how to find both paths but in my case they look like this:
+
+The run this command `spicetify`. This will create a config-xpui.ini file where you'll configure Spicetify.
+
+Navigate to the Spicetify folder in your .config folder and open config-xpui.ini. Here you will modify spotify_path and prefs_path. Their [official guide](https://spicetify.app/docs/advanced-usage/installation/) tells you how to find both paths but in my case they look like this:
 ```
 spotify_path  = /home/ngz91/.local/share/spotify-launcher/install/usr/share/spotify/
 prefs_path    = /home/ngz91/.config/spotify/prefs
