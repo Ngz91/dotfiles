@@ -387,7 +387,7 @@ spotify_path  = /home/ngz91/.local/share/spotify-launcher/install/usr/share/spot
 prefs_path    = /home/ngz91/.config/spotify/prefs
 ```
 
-After this, you can change your own theme using this command (I recommend doing this inside the spicetify Themes folder):
+After this, you can change your own theme using this command (I'd recommend doing this inside the spicetify Themes folder):
 ```
 spicetify config current_theme "Path_to_your_configuration"
 ```
