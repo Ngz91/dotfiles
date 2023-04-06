@@ -29,7 +29,7 @@
 | Terminal           |   [Kitty](https://sw.kovidgoyal.net/kitty/) :cat: |  Go to Terminal [Section](#kitty-installation)  |
 | Shell              |   [Zsh](https://www.zsh.org/) :milky_way: |  Go to Shell [Section](#zsh--oh-my-zsh)  |
 | AUR Helper         |   [Yay](https://github.com/Jguer/yay) :ice_cream: |  Go to Yay [Section](#yay-installation)  |
-| Fonts              |   [Nerd Fonts](https://github.com/Jguer/yay) :pencil2: |  Go to Fonts [Section](#nerd-fonts-installation)  |
+| Fonts              |   [Nerd Fonts](https://www.nerdfonts.com/) :pencil2: |  Go to Fonts [Section](#nerd-fonts-installation)  |
 | Status Bar         |   [Polybar](https://polybar.github.io/) :hammer_and_pick: |  Go to Status Bar [Section](#polybar)  |
 | Launcher           |   [Rofi](https://github.com/davatorium/rofi) :rocket:|  Go to Launcher [Section](#rofi)  |
 | Compositor         |   [Picom](https://github.com/yshui/picom) :comet: |  Go to Compositor [Section](#picom)  |
