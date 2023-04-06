@@ -22,20 +22,22 @@
 
 # Details:
 
-| Class | Tool |
-------|------
-| OS                 |   [Arch](https://archlinux.org/) :sushi: |
-| WM                 |   [i3](https://i3wm.org/) :sparkler: |
-| Terminal           |   [Kitty](https://sw.kovidgoyal.net/kitty/) :cat: |
-| Shell              |   [Zsh](https://www.zsh.org/) :milky_way: |
-| Status Bar         |   [Polybar](https://polybar.github.io/) :hammer_and_pick: |
-| Launcher           |   [Rofi](https://github.com/davatorium/rofi) :rocket:|
-| Compositor         |   [Picom](https://github.com/yshui/picom) :comet: |
-| File Manager       |   [Ranger](https://github.com/ranger/ranger) :file_folder: |
-| Document Reader    |   [Zathura](https://pwmt.org/projects/zathura/) :notebook_with_decorative_cover: |
-| IDE                |   [Neovim](https://neovim.io/) :computer: |
+| Class | Tool | Section |
+------|------|------
+| OS                 |   [Arch](https://archlinux.org/) :sushi: |  Go to OS [Section](#installation-guide)  |
+| WM                 |   [i3](https://i3wm.org/) :sparkler: |  Go to WM [Section](#configuring-arch)  |
+| Terminal           |   [Kitty](https://sw.kovidgoyal.net/kitty/) :cat: |  Go to Terminal [Section](#kitty-installation)  |
+| Shell              |   [Zsh](https://www.zsh.org/) :milky_way: |  Go to Shell [Section](#zsh--oh-my-zsh)  |
+| AUR Helper         |   [Yay](https://github.com/Jguer/yay) :ice_cream: |  Go to Yay [Section](#yay-installation)  |
+| Status Bar         |   [Polybar](https://polybar.github.io/) :hammer_and_pick: |  Go to Status Bar [Section](#polybar)  |
+| Launcher           |   [Rofi](https://github.com/davatorium/rofi) :rocket:|  Go to Launcher [Section](#rofi)  |
+| Compositor         |   [Picom](https://github.com/yshui/picom) :comet: |  Go to Compositor [Section](#picom)  |
+| File Manager       |   [Ranger](https://github.com/ranger/ranger) :file_folder: |  Go to File Manager [Section](#ranger-and-zathura)  |
+| Document Reader    |   [Zathura](https://pwmt.org/projects/zathura/) :notebook_with_decorative_cover: |  Go to Doc Reader [Section](#ranger-and-zathura)  |
+| IDE                |   [Neovim](https://neovim.io/) :computer: |  Go to IDE [Section](#neovim)  |
+| Music App          |   [Spotify & Spicetify](https://spicetify.app/) :musical_score: |  Go to Music App [Section](#spotify--spicetify)  |
 
-# Installation Guide (WIP)
+# Installation Guide
 
 First install Arch linux by following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the ArchInstall package to automate the installation process. <b>IMPORTANT:</b> If you are installing Arch as a dual boot don't follow this method. Follow one of these videos instead:
 
