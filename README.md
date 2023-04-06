@@ -196,6 +196,8 @@ Yay is an AUR (Arch User Repository) helper written in Go. We will use it to ins
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
 
+[Go back](#details) to details
+
 ## Kitty installation
 <div align="center">
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/wiggle.gif width="500" height="280" />
