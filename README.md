@@ -88,7 +88,7 @@ Boot into Arch and you should be greeted by the login manager. If you installed 
 
 Congrats, Arch is now installed :tada:
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 # Configuring Arch
 <div align="center">
@@ -184,7 +184,7 @@ exec --no-startup-id killall back4.sh
 exec --no-startup-id sh back4.sh 0.025 ~/path/to/your-gif-file.gif
 ```
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Yay installation
 
@@ -197,7 +197,7 @@ Yay is an AUR (Arch User Repository) helper written in Go. We will use it to ins
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Kitty installation
 <div align="center">
@@ -216,7 +216,7 @@ bindsym $mod+Return exec kitty
 ```
 You can change Kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of your interest.
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Nerd Fonts installation
 
@@ -231,7 +231,7 @@ First make a .fonts folder in the same directory where .config is, then download
 fc-cache -fv
 ```
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Zsh & Oh-my-zsh
 
@@ -268,7 +268,7 @@ You can find all available Oh-my-zsh themes [here](https://github.com/ohmyzsh/oh
 
 Note: There are other themes that are not in the aforementioned repository that can be installed and used. Their installation will not be explained in this guide.
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Picom
 
@@ -305,7 +305,7 @@ exec --no-startup-id picom
 ```
 If you are having problems with your Picom configuration copy my conf file and from there edit what you want and what not.
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Rofi
 
@@ -329,7 +329,7 @@ To assign Rofi a keybinding add this to your i3 config file:
 exec --no-startup-id sh rofi -show drun
 ```
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Polybar
 
@@ -355,7 +355,7 @@ exec --no-startup-id sh ~/.config/polybar/launch.sh
 
 Polybar is pretty well documented, you can read the documentation in [their repository](https://github.com/polybar/polybar/wiki/) if you have any doubt about how to use it or how to customize it.
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Ranger and Zathura
 
@@ -384,7 +384,7 @@ You can assign Ranger a keybind similar to this
 bindsym $mod+Shift+v exec kitty -e ranger
 ```
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Spotify & Spicetify
 <div align="center">
@@ -426,7 +426,7 @@ You can use this kaybind to launch spotify:
 bindsym $mod+Shift+m exec spotify-launcher
 ```
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 ## Neovim
 
@@ -501,7 +501,7 @@ Follow their guide on how to add plugins to your configuration. But before addin
 
 [This guide](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f) is one of the most complete guides there are for configuring Neovim, if you have any doubt most likely the answer can be found there. Visit the [Neovim reddit](https://www.reddit.com/r/neovim/) forum if you have any doubt, it's a very open and welcoming community.
 
-[Go back](#details) to details
+<b>⬅️[Go back](#details) to details</b>
 
 # Some notes and resources
 <div align="center">
@@ -535,3 +535,5 @@ Here are some resources that you might find useful for continuing your ricing jo
 - [Eric Murphy](https://www.youtube.com/@EricMurphyxyz) youtube channel.
 - chrisatmachine [Youtube](https://www.youtube.com/@chrisatmachine) and [Github](https://github.com/ChristianChiarulli) for neovim configurations and plugins.
 - [Alpha2phi Neovim articles](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f).
+
+<b>⬅️[Back](#-dot-files--guide-) to the top</b>
