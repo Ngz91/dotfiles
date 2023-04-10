@@ -24,19 +24,19 @@
 
 | Class | Tool | Section |
 ------|------|------
-| OS                 |   [Arch](https://archlinux.org/) :sushi: |  Go to OS [Section](#installation-guide)  |
-| WM                 |   [i3](https://i3wm.org/) :sparkler: |  Go to WM [Section](#configuring-arch)  |
-| Terminal           |   [Kitty](https://sw.kovidgoyal.net/kitty/) :cat: |  Go to Terminal [Section](#kitty-installation)  |
-| Shell              |   [Zsh](https://www.zsh.org/) :milky_way: |  Go to Shell [Section](#zsh--oh-my-zsh)  |
-| AUR Helper         |   [Yay](https://github.com/Jguer/yay) :ice_cream: |  Go to Yay [Section](#yay-installation)  |
-| Fonts              |   [Nerd Fonts](https://www.nerdfonts.com/) :pencil2: |  Go to Fonts [Section](#nerd-fonts-installation)  |
-| Status Bar         |   [Polybar](https://polybar.github.io/) :hammer_and_pick: |  Go to Status Bar [Section](#polybar)  |
-| Launcher           |   [Rofi](https://github.com/davatorium/rofi) :rocket:|  Go to Launcher [Section](#rofi)  |
-| Compositor         |   [Picom](https://github.com/yshui/picom) :comet: |  Go to Compositor [Section](#picom)  |
-| File Manager       |   [Ranger](https://github.com/ranger/ranger) :file_folder: |  Go to File Manager [Section](#ranger-and-zathura)  |
-| Document Reader    |   [Zathura](https://pwmt.org/projects/zathura/) :notebook_with_decorative_cover: |  Go to Doc Reader [Section](#ranger-and-zathura)  |
-| IDE                |   [Neovim](https://neovim.io/) :computer: |  Go to IDE [Section](#neovim)  |
-| Music App          |   [Spotify & Spicetify](https://spicetify.app/) :musical_score: |  Go to Music App [Section](#spotify--spicetify)  |
+| OS                 |   [Arch](https://archlinux.org/) :sushi: |  Go to [Section](#installation-guide)  |
+| WM                 |   [i3](https://i3wm.org/) :sparkler: |  Go to [Section](#configuring-arch)  |
+| Terminal           |   [Kitty](https://sw.kovidgoyal.net/kitty/) :cat: |  Go to [Section](#kitty-installation)  |
+| Shell              |   [Zsh](https://www.zsh.org/) :milky_way: |  Go to [Section](#zsh--oh-my-zsh)  |
+| AUR Helper         |   [Yay](https://github.com/Jguer/yay) :ice_cream: |  Go to [Section](#yay-installation)  |
+| Fonts              |   [Nerd Fonts](https://www.nerdfonts.com/) :pencil2: |  Go to [Section](#nerd-fonts-installation)  |
+| Status Bar         |   [Polybar](https://polybar.github.io/) :hammer_and_pick: |  Go to [Section](#polybar)  |
+| Launcher           |   [Rofi](https://github.com/davatorium/rofi) :rocket:|  Go to [Section](#rofi)  |
+| Compositor         |   [Picom](https://github.com/yshui/picom) :comet: |  Go to [Section](#picom)  |
+| File Manager       |   [Ranger](https://github.com/ranger/ranger) :file_folder: |  Go to [Section](#ranger-and-zathura)  |
+| Document Reader    |   [Zathura](https://pwmt.org/projects/zathura/) :notebook_with_decorative_cover: |  Go to [Section](#ranger-and-zathura)  |
+| IDE                |   [Neovim](https://neovim.io/) :computer: |  Go to [Section](#neovim)  |
+| Music App          |   [Spotify & Spicetify](https://spicetify.app/) :musical_score: |  Go to [Section](#spotify--spicetify)  |
 
 # Installation Guide
 
