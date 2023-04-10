@@ -97,7 +97,7 @@ Congrats, Arch is now installed :tada:
 
 </div>
 
-After booting into session you will see a black screen and a bar at the bottom of the screen, all in the incorrect resolution. i3 will then ask if you want a configuration to be created for you, select `Yes` and this will create a configuration file at .config/i3 named config where you can add your keybindings, exec commands, etc. If you want to familiarize yourself with the i3WM I recommend reading their [user guide](https://i3wm.org/docs/userguide.html).
+After booting into session you will see a black screen and a bar at the bottom of the screen, all in the incorrect resolution. i3 will then ask if you want a configuration to be created for you, select `Yes` and this will create a configuration file at .config/i3 named config where you can add your keybindings, exec commands, etc. If you want to familiarize yourself with the i3WM I'd recommend reading their [user guide](https://i3wm.org/docs/userguide.html).
 
 To fix the resolution open your terminal with Mod+enter and run this command (The Mod key is most likely your Windows key):
 ```
