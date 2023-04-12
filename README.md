@@ -400,7 +400,9 @@ Open it and log in. Check your audio. Close it and install spicetify-cli, we wil
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
 ```
 
-The run this command `spicetify`. This will create a config-xpui.ini file where you'll configure Spicetify.
+Check that spicetify is installed by running `spicetify --help`.
+
+Then run the `spicetify` command. This will create a config-xpui.ini file where you'll configure Spicetify.
 
 Navigate to the Spicetify folder in your .config folder and open config-xpui.ini. Here you will modify spotify_path and prefs_path. Their [official guide](https://spicetify.app/docs/advanced-usage/installation/) tells you how to find both paths but in my case they look like this:
 ```
@@ -417,7 +419,7 @@ To add extensions, create an Extensions folder inside the Spicetify folder and u
 spicetify config extensions "Extension_name"
 ```
 
-Then run `spicetify apply`, if it ask you for a backup run `spicetify backup apply`.
+Run `spicetify backup apply` to create a backup and then run `spicetify apply`.
 
 Visit the [Unixporn forum](https://www.reddit.com/r/unixporn/) to see some awesome spicetify themes.
 
