@@ -320,9 +320,9 @@ sudo pacman -S rofi
 ```
 Then run it using `rofi --show drun`. [Here](https://github.com/davatorium/rofi) you can read about other options to run rofi.
 
-Create a rofi folder in your config and add the files from [iamverysimp1e's config](https://github.com/iamverysimp1e/dots/tree/main/configs/rofi), this will give you a start for you to customize your own Rofi theme.
+Create a rofi folder in your config and add the files from [iamverysimp1e's config](https://github.com/1amSimp1e/dots/tree/late-night-%F0%9F%8C%83/configs/rofi), this will give you a start for you to customize your own Rofi theme.
 
-There are other preconfigured and easy to customize Rofi themes in [this repo](https://github.com/adi1090x/rofi)
+There are other preconfigured and easy to customize Rofi themes in [this repo](https://github.com/adi1090x/rofi).
 
 To assign Rofi a keybinding add this to your i3 config file:
 ```
