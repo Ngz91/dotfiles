@@ -503,7 +503,7 @@ Follow their guide on how to add plugins to your configuration. But before addin
 "matchit",
 ```
 
-[This guide](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f) is one of the most complete guides there are for configuring Neovim, if you have any doubt most likely the answer can be found there. Visit the [Neovim reddit](https://www.reddit.com/r/neovim/) forum if you have any doubt, it's a very open and welcoming community.
+[This guide](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f) is one of the most complete guides for configuring Neovim, if you have any doubt about how to configure a plugin or any other type of configuration, the answer most likely can be found there. Also, visit the [Neovim reddit](https://www.reddit.com/r/neovim/) forum if you have any doubt, it's a very open and welcoming community.
 
 <b>⬅️[Go back](#details) to details</b>
 
@@ -512,9 +512,9 @@ Follow their guide on how to add plugins to your configuration. But before addin
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-sam-mgr.gif width="500" height="280" />
 </div>
 
-Congrats, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser, spotify and Neovim open instead of having 4gb+ ram usage while idle. And not only that but you are entitled to say "I use Arch linux btw" to every person you talk to.
+Congrats, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser, spotify and Neovim open instead of having 4gb+ ram usage while idle. And not only that, but you are entitled to say "I use Arch linux btw" to every person you talk to.
 
-Hope this guide helped you in your configuration process. If you have found anything that's not clear or wrong, please let me know, I'll be updating this guide every now and then.
+I hope this guide helped you in your configuration process. If you have found anything that's not clear or wrong, please let me know, I'll be updating this guide every now and then.
 
 ## Notes
 You might want to have gaps in between the windows. To do so, add this to your i3 config file and change it based on your preference:
