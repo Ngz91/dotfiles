@@ -353,7 +353,7 @@ Then add this to your i3 config file:
 exec --no-startup-id sh ~/.config/polybar/launch.sh
 ```
 
-Another option to easily set a Polybar theme is by installing [polybar-themes](https://github.com/adi1090x/polybar-themes). All the installation and cofiguration steps are in the repository.
+Another option to easily set a Polybar theme is by installing the themes at [polybar-themes](https://github.com/adi1090x/polybar-themes) in your system. All the installation and configuration steps are in the repository.
 
 Polybar is pretty well documented, you can read the documentation in [their repository](https://github.com/polybar/polybar/wiki/) if you have any doubt about how to use it or how to customize it.
 
