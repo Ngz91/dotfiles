@@ -472,7 +472,7 @@ A Neovim configuration folder structure looks something like this:
     └── packer_compiled.lua
 ```
 
-init.lua is the first file neovim loads, here you can require other files with the plugins configurations or scripts that you wanna run. lua/user is where your Lua scripts and plugins configurations are, you can require them in init.lua by using the require function `require("user.plugin1")`. There's also a lsp(language server protocol) folder where all lsp configuration lies, here you can configure your language servers and lsp based plugins like lsp-saga, illuminate, etc.
+init.lua is the first file Neovim loads, here you can require other files with the plugins configurations or scripts that you wanna run. lua/user is where your Lua scripts and plugins configurations are, you can require them in init.lua by using the require function `require("user.plugin1")`. There's also a lsp(language server protocol) folder where all lsp configuration lies, here you can configure your language servers and lsp based plugins like lsp-saga, illuminate, etc.
 
 <b>NOTE:</b> This is not a standard, there are various ways this folder can be structured, but this one is very easy to understand.
 
@@ -481,7 +481,7 @@ To install plugins there are various plugins managers, but the two most popular 
 yay -S nvim-packer-git
 ```
 
-Follow their guide on how to add plugins to your configuration. But before adding plugins you might want to disable some plugins that come with neovim and are not used, these are:
+Follow their guide on how to add plugins to your configuration. But before adding plugins you might want to disable some plugins that come with Neovim and are not used, these are:
 ```
 "netrw",
 "netrwPlugin",
@@ -503,7 +503,7 @@ Follow their guide on how to add plugins to your configuration. But before addin
 "matchit",
 ```
 
-[This guide](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f) is one of the most complete guides for configuring Neovim, if you have any doubt about how to configure a plugin or any other type of configuration, the answer most likely can be found there. Also, visit the [Neovim reddit](https://www.reddit.com/r/neovim/) forum if you have any doubt, it's a very open and welcoming community.
+[This guide](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f) is one of the most complete guides for configuring Neovim, if you have any doubt about how to configure a plugin or any other type of configuration, the answer, most likely, can be found there. Also, visit the [Neovim reddit](https://www.reddit.com/r/neovim/) forum if you have any doubt, it's a very open and welcoming community.
 
 <b>⬅️[Go back](#details) to details</b>
 
