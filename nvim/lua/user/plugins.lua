@@ -152,6 +152,7 @@ return packer.startup(function(use)
 		-- optional for supporting ':Telescope nvim-gpt gpt_model/gpt_history/gpt_template' commands
 		requires = { 'nvim-telescope/telescope.nvim' },
 	})
+	use('Exafunction/codeium.vim')
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
