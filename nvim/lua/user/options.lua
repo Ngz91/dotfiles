@@ -69,6 +69,7 @@ end
 
 vim.opt.shortmess:append("c")
 
+vim.cmd("lua vim.g.codeium_enabled = 0")
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work

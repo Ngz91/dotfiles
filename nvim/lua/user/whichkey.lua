@@ -234,6 +234,15 @@ local mappings = {
 		c = { "<cmd>lua vim.g.cmp_active = not vim.g.cmp_active<cr>", "Completion On/Off" },
 		w = { "<cmd>set wrap!<cr>", "Wrap" },
 	},
+  i = {
+    name = " AI",
+    b = {"<cmd>GPT<cr>", "BingGPT"},
+    c = {"<cmd>GPTCode<cr>", "BingGPT Code"},
+    C = {"<cmd>GPTClose<cr>", "BingGPT Close"},
+    w = {"<cmd>GPTWrite<cr>", "BingGPT Write Code"},
+    e = {"<cmd>CodeiumEnable<cr>", "Enable Codeium"},
+    d = {"<cmd>CodeiumDisable<cr>", "Disable Codeium"},
+  }
 }
 
 which_key.setup(setup)
