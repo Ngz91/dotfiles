@@ -99,7 +99,6 @@ local mappings = {
 	["C"] = { "<cmd>PickColor<cr>", " Color picker" },
 	["v"] = { "<cmd>vsplit<cr>", " Vsplit" },
 	["H"] = { "<cmd>split<cr>", " Hsplit" },
-
 	p = {
 		name = " Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -108,7 +107,6 @@ local mappings = {
 		S = { "<cmd>PackerStatus<cr>", "Status" },
 		u = { "<cmd>PackerUpdate<cr>", "Update" },
 	},
-
 	g = {
 		name = " Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -140,7 +138,6 @@ local mappings = {
 		t = { "<cmd>lua _DJANGO_SHELL()<cr>", "Django Shell" },
 		F = { "<cmd>lua _DJANGO_FLUSH()<cr>", "Flush DB" },
 	},
-
 	D = {
 		name = " Python debugging",
 		t = { "<cmd>DapToggleBreakpoint<cr>", "Toggle" },
@@ -148,7 +145,6 @@ local mappings = {
 		k = { "<cmd>DapTerminate<cr>", "Terminate" },
 		l = { "<cmd>DapShowLog<cr>", "Log" },
 	},
-
 	l = {
 		name = " LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -234,15 +230,27 @@ local mappings = {
 		c = { "<cmd>lua vim.g.cmp_active = not vim.g.cmp_active<cr>", "Completion On/Off" },
 		w = { "<cmd>set wrap!<cr>", "Wrap" },
 	},
-  i = {
-    name = " AI",
-    b = {"<cmd>GPT<cr>", "BingGPT"},
-    c = {"<cmd>GPTCode<cr>", "BingGPT Code"},
-    C = {"<cmd>GPTClose<cr>", "BingGPT Close"},
-    w = {"<cmd>GPTWrite<cr>", "BingGPT Write Code"},
-    e = {"<cmd>CodeiumEnable<cr>", "Enable Codeium"},
-    d = {"<cmd>CodeiumDisable<cr>", "Disable Codeium"},
-  }
+	i = {
+		name = " AI",
+		b = { "<cmd>GPT<cr>", "BingGPT" },
+		c = { "<cmd>GPTCode<cr>", "BingGPT Code" },
+		C = { "<cmd>GPTClose<cr>", "BingGPT Close" },
+		w = { "<cmd>GPTWrite<cr>", "BingGPT Write Code" },
+		e = {
+			function()
+				vim.cmd("CodeiumEnable")
+				print("Codeium Enabled")
+			end,
+			"Enable Codeium",
+		},
+		d = {
+			function()
+				vim.cmd("CodeiumDisable")
+				print("Codeium Disabled")
+			end,
+			"Disable Codeium",
+		},
+	},
 }
 
 which_key.setup(setup)
