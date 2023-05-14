@@ -40,7 +40,7 @@
 
 # Installation Guide
 
-First install Arch linux by following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the ArchInstall package to automate the installation process. <b>IMPORTANT:</b> If you are installing Arch as a dual boot don't follow this method. Follow one of these videos instead:
+Install Arch by following the installation steps in the Arch linux [official installation guide](https://wiki.archlinux.org/title/installation_guide) or use the ArchInstall package to automate the installation process. <b>IMPORTANT:</b> If you are installing Arch as a dual boot don't follow this method. Follow one of these videos instead:
 
 - Manual [installation](https://www.youtube.com/watch?v=JRdYSGh-g3s)
 - ArchInstall [installation 1](https://www.youtube.com/watch?v=-Sz2W6k3HkM)
@@ -97,7 +97,7 @@ Congrats, Arch is now installed :tada:
 
 </div>
 
-After booting into session you will see a black screen and a bar at the bottom of the screen, all in the incorrect resolution. i3 will then ask if you want a configuration to be created for you, select `Yes` and this will create a configuration file at .config/i3 named config where you can add your keybindings, exec commands, etc. If you want to familiarize yourself with the i3WM I'd recommend reading their [user guide](https://i3wm.org/docs/userguide.html).
+After booting into session you'll see a black screen and a bar at the bottom of the screen, all in the incorrect resolution. i3 will then ask if you want a configuration to be created for you, select `Yes` and this will create a configuration file at .config/i3 named config where you can add your keybindings, exec commands, etc. If you want to familiarize yourself with the i3WM I'd recommend reading their [user guide](https://i3wm.org/docs/userguide.html).
 
 To fix the resolution open your terminal with Mod+enter and run this command (The Mod key is most likely your Windows key):
 ```
