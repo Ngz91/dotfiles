@@ -373,7 +373,7 @@ sudo pacman -S zathura ranger
 ```
 Then create their respective folders inside .config. You can copy my Ranger configuration, it will give you something to start with. Same for the Zathura configuration.
     
-Some notes. If you want ranger to preview the images in Kitty you'll need to install Pillow by using this command:
+<b>Some notes</b>. If you want Ranger to preview the images in Kitty, then you'll need to install Pillow by using this command:
 ```
 pip install pillow
 ```
