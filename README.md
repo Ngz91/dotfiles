@@ -78,9 +78,9 @@ Select the options that better work for you, but in my case and configuration th
 - automatic time synch: true
 - Additional repos: multilib
 
-After cheking that the options are correct select Install. Go for a coffee :coffee: and wait.
+After checking that the options are correct select 'Install'. Go for a coffee :coffee: and wait.
 
-After finishing the installation it will ask you if you'll like to chroot into the newly created installation. Select no and reboot the machine by running:
+After finishing the installation process the script will ask you if you'll like to chroot into the newly created installation. Select no and reboot the machine by running:
 ```
 reboot
 ```
