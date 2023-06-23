@@ -137,7 +137,7 @@ Now save the file and exit vim.
 (:q+enter to exit vim)
 <br/><br/>
 
-Test this changes by rebooting into Arch
+Test these changes by rebooting into Arch
 ```
 reboot
 ```
