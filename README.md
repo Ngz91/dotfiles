@@ -192,10 +192,11 @@ exec --no-startup-id sh back4.sh 0.025 ~/path/to/your-gif-file.gif
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/yogurt-anime.gif width="500" height="280" />
 </div>
 
-Yay is an AUR (Arch User Repository) helper written in Go. We will use it to install some packages that are not in the official package repo or the version that is it's outdated. Visit the official [github repository](https://github.com/Jguer/yay) for the installation steps or run this command:
+Yay is an AUR (Arch User Repository) helper written in Go. We will use it to install some packages that are not in the official package repo or when a newer version of the program is available in the community repo. Visit the official [github repository](https://github.com/Jguer/yay) for the installation steps or run this command:
 ```
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ```
+<b>Warning:</b> AUR helpers are not supported by Arch Linux.
 
 <b>⬅️[Go back](#details) to details</b>
 
