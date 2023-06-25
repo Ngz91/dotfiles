@@ -171,14 +171,14 @@ Also, install these packages, they will be needed.
 sudo pacman -S ripgrep fzf xsel nodejs npm lazygit git python-pip thunar-archive-plugin zip stylua
 ```
 
-To render japanese characters install these packages
+To render japanese characters install these packages:
 ```
 sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
 ```
 
 If you want to set a gif wallpaper follow the instructions in this [guide](https://github.com/thomas10-10/foo-Wallpaper-Feh-Gif).
 
-And add these two lines to your i3 configuration file
+And add these two lines to your i3 configuration file:
 ```
 exec --no-startup-id killall back4.sh 
 exec --no-startup-id sh back4.sh 0.025 ~/path/to/your-gif-file.gif
