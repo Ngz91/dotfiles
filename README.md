@@ -108,7 +108,7 @@ This will give you a list with different screens and their resolutions, select t
 xrandr --output *screen name here* --mode "resolution here"
 ```
 
-Next, run this command to sync and upgrade Arch packages:
+Next, run this command to sync and upgrade all Arch packages:
 ```
 sudo pacman -Syu
 ```
@@ -119,7 +119,7 @@ sudo pacman -S feh
 feh --bg-scale $HOME/Downloads/some-example-image.jpg
 ```
 
-To make this changes permanent nevigate to .config/i3 on your terminal and open in vim the config file that's there. Then add these lines to the end of the file. (If you don't know how to use vim use [this cheat sheet](https://vim.rtorr.com/))
+To make this changes permanent navigate to .config/i3 on your terminal and open in vim the config file that's there. Then add these lines to the end of the file. (If you don't know how to use vim use [this cheat sheet](https://vim.rtorr.com/))
 ```
 exec --no-startup-id xrandr --output *screen-name* --mode "resolution here"
 exec --no-startup-id feh --bg-scale $HOME/Downloads/some-example-image.jpg
@@ -349,7 +349,7 @@ chmod u+x scripts/diskusage
 chmod u+x scripts/memory
 chmod u+x scripts/network
 ```
-Then add this to your i3 config file:
+And add this to your i3 config file:
 ```
 exec --no-startup-id sh ~/.config/polybar/launch.sh
 ```
