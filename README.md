@@ -394,20 +394,20 @@ bindsym $mod+Shift+v exec kitty -e ranger
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/persona-persona3.gif width="500" height="280" />
 </div>
 
-Install spotify using the package in Arch repo (Do not use the Snap package since Spicetify is not gonna work with it)
+Install Spotify using the package in the official Arch repo (Do not use the Snap package since Spicetify is not gonna work with it)
 ```
 sudo pacman -S spotify-launcher
 ```
-Open it and log in. Check your audio. Close it and install spicetify-cli, we will use it to customize Spotify theme and add extensions. Install it by running or follow their [guide](https://spicetify.app/docs/advanced-usage/installation/):
+Open it and log in. Check your audio. Close it and install spicetify-cli, we will use it to customize Spotify and add extensions. Follow their [guide](https://spicetify.app/docs/advanced-usage/installation/) for installation or install it by running:
 ```
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
 ```
 
 Check that spicetify is installed by running `spicetify --help`.
 
-Then run the `spicetify` command. This will create a config-xpui.ini file where you'll configure Spicetify.
+Then run the `spicetify` command. This will create a config-xpui.ini file where you'll configure the Spicetify variables.
 
-Navigate to the Spicetify folder in your .config folder and open config-xpui.ini. Here you will modify spotify_path and prefs_path. Their [official guide](https://spicetify.app/docs/advanced-usage/installation/) tells you how to find both paths but in my case they look like this:
+Navigate to the Spicetify folder in your .config folder and open config-xpui.ini. Here you will modify spotify_path and prefs_path. Their [official guide](https://spicetify.app/docs/advanced-usage/installation/) tells you how to find both paths, but in my case they look like this:
 ```
 spotify_path  = /home/ngz91/.local/share/spotify-launcher/install/usr/share/spotify/
 prefs_path    = /home/ngz91/.config/spotify/prefs
@@ -477,7 +477,7 @@ init.lua is the first file Neovim loads, here you can require other files with t
 
 <b>NOTE:</b> This is not a standard, there are various ways this folder can be structured, but this one is very easy to understand.
 
-To install plugins there are various plugins managers, but the two most popular are [Packer.nvim](https://github.com/wbthomason/packer.nvim) and [lazy.nvim](https://github.com/folke/lazy.nvim). If you go with Packer there's an [AUR package](https://aur.archlinux.org/packages/nvim-packer-git) available, this will take care of the configuration for you:
+To install plugins there are various plugins managers, but the two most popular are [Packer.nvim](https://github.com/wbthomason/packer.nvim) and [lazy.nvim](https://github.com/folke/lazy.nvim). If you decide for Packer, there's an [AUR package](https://aur.archlinux.org/packages/nvim-packer-git) available, this will take care of the configuration for you:
 ```
 yay -S nvim-packer-git
 ```
@@ -513,7 +513,7 @@ Follow their guide on how to add plugins to your configuration. But before addin
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-sam-mgr.gif width="500" height="280" />
 </div>
 
-Congrats, by now you should have a riced Arch linux enviroment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser, spotify and Neovim open instead of having 4gb+ ram usage while idle. And not only that, but you are entitled to say "I use Arch linux btw" to every person you talk to.
+Congrats, by now you should have a riced Arch linux environment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser, spotify and Neovim open instead of having 4gb+ ram usage while idle.
 
 I hope this guide helped you in your configuration process. If you have found anything that's not clear or wrong, please let me know, I'll be updating this guide every now and then.
 
