@@ -298,7 +298,7 @@ This tells Picom to follow these opacity rules for the specific program that's r
 ```
 "100:class_g = 'firefox'",
 ```
-As a side note, Picom uses backends for rendering, some of them handle features that others can't. The default one is xrender, but you can try others at your own risk. Here is a [manual](https://man.archlinux.org/man/picom.1.en) explaining other options available for configuration. In case changing the Picom backend freezes your computer, open a console by pressing `Ctrl+Alt+F2`, log in and change the backend line.
+As a side note, Picom uses backends for rendering, some of them handle features that others can't. The default one is xrender, but you can try others at your own risk. Here is a [manual](https://man.archlinux.org/man/picom.1.en) explaining other options available for configuration. In case that changing the Picom backend freezes your computer, open a console by pressing `Ctrl+Alt+F2`, log in, change the backend line and reboot your system.
 
 To run Picom on start up add this line to your i3 config file:
 ```
