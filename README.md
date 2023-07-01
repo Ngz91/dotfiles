@@ -78,13 +78,13 @@ Select the options that better work for you, but in my case and configuration th
 - automatic time synch: true
 - Additional repos: multilib
 
-After checking that the options are correct select 'Install'. Go for a coffee :coffee: and wait.
+After checking that the options are correct select `Install`. Go for a coffee :coffee: and wait.
 
-After finishing the installation process the script will ask you if you'll like to chroot into the newly created installation. Select no and reboot the machine by running:
+After finishing the installation process, the script will ask you if you'd like to chroot into the newly created installation. Select `no` and reboot the machine by running:
 ```
 reboot
 ```
-Boot into Arch and you should be greeted by the login manager. If you installed Arch in a virtual machine remember to remove the ISO file before booting into the machine again.
+Boot into Arch and you should be greeted by the login manager. <b>Note:</b> If you installed Arch in a virtual machine remember to remove the ISO file before booting into the machine again.
 
 Congrats, Arch is now installed :tada:
 
@@ -267,7 +267,7 @@ source .zshrc
 
 You can find all available Oh-my-zsh themes [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes).
 
-Note: There are other themes that are not in the aforementioned repository that can be installed and used. Their installation will not be explained in this guide.
+<b>Note:</b> There are other themes that are not in the aforementioned repository that can be installed. Their installation will not be explained in this guide.
 
 <b>⬅️[Go back](#details) to details</b>
 
@@ -277,7 +277,7 @@ Note: There are other themes that are not in the aforementioned repository that 
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/disappearing.gif width="500" height="280" />
 </div>
 
-Picom is a window compositor, in our case we will use it to make some of our windows  transparent. Install it by running:
+Picom is a window compositor, in our case we will use it to make some of our windows transparent. Install it by running:
 ```
 sudo pacman -S picom
 ```
