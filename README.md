@@ -215,7 +215,7 @@ Then change the i3 configuration to open Kitty instead of the default terminal b
 ```
 bindsym $mod+Return exec kitty
 ```
-You can change Kitty's theme in .config/kitty/kitty.conf. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of your interest.
+You can change Kitty's theme in `.config/kitty/kitty.conf`. Add my configuration or use the one you like. In [this repo](https://github.com/dexpota/kitty-themes) there are some themes that might be of your interest.
 
 <b>⬅️[Go back](#details) to details</b>
 
@@ -439,7 +439,7 @@ bindsym $mod+Shift+m exec spotify-launcher
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/coding-anime.gif width="500" height="280" />
 </div>
 
-Neovim is a terminal based text editor, it's extremely powerful and customizable, and very hard to configure if you don't know what you are doing. I recommend using a neovim premade configuration before making your own, or you can configure one yourself by following Tatsuya Matsuyama [video](https://www.youtube.com/watch?v=ajmK0ZNcM4Q), that way you can get a starting minimal configuration and also get an understanding of how Neovim configurations work.
+Neovim is a terminal based text editor, it's extremely powerful and customizable, and very hard to configure if you don't know what you are doing. I recommend using a neovim premade configuration before making your own, or you can configure one yourself by following Tatsuya Matsuyama's [video](https://www.youtube.com/watch?v=ajmK0ZNcM4Q), that way you can get a starting minimal configuration and also get an understanding of how Neovim configurations work.
 
 Some good premade configurations are:
 - [LunarVim](https://github.com/LunarVim/LunarVim)
@@ -513,7 +513,7 @@ Follow their guide on how to add plugins to your configuration. But before addin
 <img src=https://raw.githubusercontent.com/Ngz91/dotfiles/master/gifs/jetstream-sam-mgr.gif width="500" height="280" />
 </div>
 
-Congrats, by now you should have a riced Arch linux environment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser, spotify and Neovim open instead of having 4gb+ ram usage while idle.
+Congrats, by now you should have a riced Arch linux environment. Configuring Linux is very time consuming and takes a lot of patience to deal with errors, but in the end it's very satisfying to see the end product and knowing that with less than 2gb of ram you can have a browser, Spotify and Neovim open instead of having 4gb+ ram usage while idle.
 
 I hope this guide helped you in your configuration process. If you have found anything that's not clear or wrong, please let me know, I'll be updating this guide every now and then.
 
