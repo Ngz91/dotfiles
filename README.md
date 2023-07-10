@@ -535,10 +535,11 @@ Remember to use Git to manage your .config folder, that way, if you mess up some
 
 ## Resources
 Here are some resources that you might find useful for continuing your ricing journey.
-- [R/unixporn](https://www.reddit.com/r/unixporn/) the home for *NIX customization
-- [Arch linux webpage](https://archlinux.org/)
+- [R/unixporn](https://www.reddit.com/r/unixporn/) the home for *NIX customization.
+- [Arch linux webpage](https://archlinux.org/).
 - [Eric Murphy](https://www.youtube.com/@EricMurphyxyz) youtube channel.
 - chrisatmachine [Youtube](https://www.youtube.com/@chrisatmachine) and [Github](https://github.com/ChristianChiarulli) for neovim configurations and plugins.
 - [Alpha2phi Neovim articles](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f).
+- [R/neovim](https://www.reddit.com/r/neovim/) reddit page.
 
 <b>⬅️[Back](#-dot-files--guide-) to the top</b>
