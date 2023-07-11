@@ -540,6 +540,6 @@ Here are some resources that you might find useful for continuing your ricing jo
 - [Eric Murphy](https://www.youtube.com/@EricMurphyxyz) youtube channel.
 - chrisatmachine [Youtube](https://www.youtube.com/@chrisatmachine) and [Github](https://github.com/ChristianChiarulli) for neovim configurations and plugins.
 - [Alpha2phi Neovim articles](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f).
-- [R/neovim](https://www.reddit.com/r/neovim/) reddit page.
+- [R/neovim](https://www.reddit.com/r/neovim/) subreddit.
 
 <b>⬅️[Back](#-dot-files--guide-) to the top</b>
