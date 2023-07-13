@@ -46,7 +46,7 @@ Install Arch by following the installation steps in the Arch linux [official ins
 - ArchInstall [installation 1](https://www.youtube.com/watch?v=-Sz2W6k3HkM)
 - ArchInstall [installation 2](https://www.youtube.com/watch?v=RoTe4uAqIHA)
 
-To install Arch using The ArchInstall package check your internet connection first by running:
+To install Arch using the ArchInstall package first check your internet connection by running:
 ```
 ping -c 5 https://archlinux.org/
 ```
