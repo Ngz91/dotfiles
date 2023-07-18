@@ -518,7 +518,7 @@ Congrats, by now you should have a riced Arch linux environment. Configuring Lin
 I hope this guide helped you in your configuration process. If you have found anything that's not clear or wrong, please let me know, I'll be updating this guide every now and then.
 
 ## Notes
-You might want to have gaps in between the windows. To do so, add this to your i3 config file and change it based on your preference:
+You might want to have gaps in between the windows. To do so, add these lines to your i3 config file and change it based on your preference:
 ```
 gaps inner 10
 gaps outer 0
