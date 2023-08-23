@@ -115,6 +115,7 @@ return packer.startup(function(use)
 	use("https://git.sr.ht/~whynothugo/lsp_lines.nvim") -- Diagnostics using virtual text
 	use("ray-x/lsp_signature.nvim") -- Signature help
 	use("simrat39/symbols-outline.nvim")
+	use("simrat39/rust-tools.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
