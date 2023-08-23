@@ -76,6 +76,15 @@ return {
         checkOnSave = {
           command = "clippy",
         },
+        cargo = {
+          allFeatures = true,
+        },
+        diagnostics = {
+          enable = true,
+          experimental = {
+            enable = true,
+          }
+        }
       },
     },
   },

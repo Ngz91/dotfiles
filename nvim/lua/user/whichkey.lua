@@ -95,7 +95,6 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", " Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", " Projects" },
-	["r"] = { "<cmd>:set number relativenumber!<cr>", " Relative numbers" },
 	["C"] = { "<cmd>PickColor<cr>", " Color picker" },
 	["v"] = { "<cmd>vsplit<cr>", " Vsplit" },
 	["H"] = { "<cmd>split<cr>", " Hsplit" },
@@ -229,7 +228,15 @@ local mappings = {
 		name = "Options",
 		c = { "<cmd>lua vim.g.cmp_active = not vim.g.cmp_active<cr>", "Completion On/Off" },
 		w = { "<cmd>set wrap!<cr>", "Wrap" },
+	  r = { "<cmd>:set number relativenumber!<cr>", "Relative numbers" },
 	},
+  r = {
+    name = "Rust",
+    h = {"<cmd>RustHoverActions<cr>", "Hover Actions"},
+    c = {"<cmd>RustOpenCargo<cr>", "Open Cargo"},
+    i = {"<cmd>RustEnableInlayHints<cr>", "Enable Inlayhints"},
+    d = {"<cmd>RustDisableInlayHints<cr>", "Disable Inlayhints"}
+  },
 	i = {
 		name = " AI",
 		b = { "<cmd>GPT<cr>", "BingGPT" },
