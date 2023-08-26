@@ -212,7 +212,7 @@ local mappings = {
 	m = {
 		name = " Pytest",
 		p = { "<cmd>lua _PYTEST_TOGGLE()<cr>", "Pytest" },
-		r = { "<cmd>lua _PYTES_REPORT_TOGGLE()<cr>", "Pytest report" },
+		r = { "<cmd>lua _PYTEST_REPORT_TOGGLE()<cr>", "Pytest report" },
 	},
 	t = {
 		name = " Terminal",
@@ -231,11 +231,13 @@ local mappings = {
 	  r = { "<cmd>:set number relativenumber!<cr>", "Relative numbers" },
 	},
   r = {
-    name = "Rust",
+    name = " Rust",
     h = {"<cmd>RustHoverActions<cr>", "Hover Actions"},
     c = {"<cmd>RustOpenCargo<cr>", "Open Cargo"},
     i = {"<cmd>RustEnableInlayHints<cr>", "Enable Inlayhints"},
-    d = {"<cmd>RustDisableInlayHints<cr>", "Disable Inlayhints"}
+    d = {"<cmd>RustDisableInlayHints<cr>", "Disable Inlayhints"},
+    k = {"<cmd>lua _CARGO_CHECK()<cr>", "Cargo Check"},
+    r = {"<cmd>RustRun<cr>", "Cargo Run"}
   },
 	i = {
 		name = " AI",
