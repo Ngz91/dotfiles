@@ -46,9 +46,19 @@ function _LAZYGIT_TOGGLE()
 end
 
 local cargo_check = Terminal:new({ cmd = "cargo check", hidden = true, direction = "float", close_on_exit = false })
+local cargo_run = Terminal:new({ cmd = "cargo run", hidden = true, direction = "float", close_on_exit = false })
+local cargo_build = Terminal:new({ cmd = "cargo build", hidden = true, direction = "float", close_on_exit = false })
 
-function _CARGO_CHECK()
+function _CARGO_CHECK_TOGGLE()
 	cargo_check:toggle()
+end
+
+function _CARGO_RUN_TOGGLE()
+	cargo_run:toggle()
+end
+
+function _CARGO_BUILD_TOGGLE()
+	cargo_build:toggle()
 end
 
 function _DJANGO_STARTPROJECT()

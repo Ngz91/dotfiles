@@ -236,8 +236,9 @@ local mappings = {
     c = {"<cmd>RustOpenCargo<cr>", "Open Cargo"},
     i = {"<cmd>RustEnableInlayHints<cr>", "Enable Inlayhints"},
     d = {"<cmd>RustDisableInlayHints<cr>", "Disable Inlayhints"},
-    k = {"<cmd>lua _CARGO_CHECK()<cr>", "Cargo Check"},
-    r = {"<cmd>RustRun<cr>", "Cargo Run"}
+    k = {"<cmd>lua _CARGO_CHECK_TOGGLE()<cr>", "Cargo Check"},
+    r = {"<cmd>lua _CARGO_RUN_TOGGLE()<cr>", "Cargo Run"},
+    b = {"<cmd>lua _CARGO_BUILD_TOGGLE()<cr>", "Cargo Build"}
   },
 	i = {
 		name = " AI",
