@@ -80,9 +80,9 @@ return {
           allFeatures = true,
         },
         diagnostics = {
-          enable = true,
+          enable = false,
           experimental = {
-            enable = true,
+            enable = false,
           }
         }
       },
