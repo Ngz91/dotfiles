@@ -239,7 +239,8 @@ local mappings = {
     k = {"<cmd>lua _CARGO_CHECK_TOGGLE()<cr>", "Cargo Check"},
     r = {"<cmd>lua _CARGO_RUN_TOGGLE()<cr>", "Cargo Run"},
     b = {"<cmd>lua _CARGO_BUILD_TOGGLE()<cr>", "Cargo Build"},
-    D = {"<cmd>:! cargo doc --open<cr>", "Generate/Open Docs"}
+    t = {"<cmd>lua _CARGO_TEST_TOGGLE()<cr>", "Run tests"},
+    D = {"<cmd>:! cargo doc --open<cr>", "Generate/Open Docs"},
   },
 	i = {
 		name = " AI",

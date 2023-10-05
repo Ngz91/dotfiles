@@ -48,6 +48,7 @@ end
 local cargo_check = Terminal:new({ cmd = "cargo check", hidden = true, direction = "float", close_on_exit = false })
 local cargo_run = Terminal:new({ cmd = "cargo run", hidden = true, direction = "float", close_on_exit = false })
 local cargo_build = Terminal:new({ cmd = "cargo build", hidden = true, direction = "float", close_on_exit = false })
+local cargo_test = Terminal:new({ cmd = "cargo test", hidden = true, direction = "float", close_on_exit = false })
 
 function _CARGO_CHECK_TOGGLE()
 	cargo_check:toggle()
@@ -59,6 +60,10 @@ end
 
 function _CARGO_BUILD_TOGGLE()
 	cargo_build:toggle()
+end
+
+function _CARGO_TEST_TOGGLE()
+	cargo_test:toggle()
 end
 
 function _DJANGO_STARTPROJECT()
