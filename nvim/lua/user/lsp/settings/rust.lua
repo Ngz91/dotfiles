@@ -71,7 +71,7 @@ return {
     settings = {
       ["rust-analyzer"] = {
         lens = {
-          enable = true,
+          enable = false,
         },
         checkOnSave = {
           command = "clippy",
