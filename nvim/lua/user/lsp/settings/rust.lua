@@ -84,6 +84,14 @@ return {
           experimental = {
             enable = false,
           }
+        },
+        completion = {
+          postfix = {
+            enable = false
+          }
+        },
+        cachePriming = {
+          enable = false
         }
       },
     },
