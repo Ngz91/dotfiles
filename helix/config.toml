@@ -1,0 +1,18 @@
+theme = "ayu_dark"
+
+[editor]
+line-number = "relative"
+mouse = false
+bufferline = "multiple"
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.lsp]
+display-messages = true
+
+[keys.normal.space]
+g = { a = "code_action" }
