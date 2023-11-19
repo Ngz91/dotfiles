@@ -35,7 +35,7 @@
 | Compositor         |   [Picom](https://github.com/yshui/picom) :comet: |  Go to [Section](#picom)  |
 | File Manager       |   [Ranger](https://github.com/ranger/ranger) :file_folder: |  Go to [Section](#ranger-and-zathura)  |
 | Document Reader    |   [Zathura](https://pwmt.org/projects/zathura/) :notebook_with_decorative_cover: |  Go to [Section](#ranger-and-zathura)  |
-| IDE                |   [Neovim](https://neovim.io/) :computer: |  Go to [Section](#neovim)  |
+| IDE                |   [Neovim](https://neovim.io/) / [Helix](https://helix-editor.com/) :computer: |  Go to [Section](#neovim)  |
 | Music App          |   [Spotify & Spicetify](https://spicetify.app/) :musical_score: |  Go to [Section](#spotify--spicetify)  |
 
 # Installation Guide
