@@ -195,9 +195,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id xrandr --output Virtual1 --mode 1920x1080
-exec --no-startup-id killall back4.sh 
-exec --no-startup-id sh back4.sh 0.025 ~/.config/gifs/room-animated.gif
+exec --no-startup-id xrandr --output Virtual1 --mode 1920x1080 
+exec --no-startup-id feh --bg-scale $HOME/Downloads/girl_raincoat_trail.jpg
 exec --no-startup-id sh ~/.config/polybar/launch.sh
 exec --no-startup-id picom
 
