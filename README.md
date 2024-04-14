@@ -56,35 +56,39 @@ python -m archinstall --script guided
 ```
 
 You'll see a promp giving you some options similar to this:
-![](https://raw.githubusercontent.com/Ngz91/dotfiles/master/screenshots/archinstall-example.jpg)
+![](https://raw.githubusercontent.com/Ngz91/dotfiles/master/screenshots/archinstall_new.png)
 
 Select the options that better work for you, but in my case and configuration these are the options:
-- language: English
-- keyboard layout: us
-- mirror region: Worldwide
-- harddrives: *VM or partition hardrive here* ext4, wipe all selected...
-- encryption pwd: *encryption password* None
-- bootloader: systemd-bootct1
-- swap: True
-- hostname: *Name of the host machine*
-- root pwd: *rootpassword*
-- user account: *superuser name and password*
-- profile: desktop -> i3 -> i3-gaps -> AMD/ATI (open-source)
-- audio: pipewire
-- kernel: linux
-- additional packages: firefox, vim, thunar
-- network: Copy ISO network conf...
-- timezone: *your timezone*
-- automatic time synch: true
+- Archinstall language: English
+- Mirrors: worldwide or us
+- Keyboard layout: us
+- Disk configuration: use best-effort..., ext4
+- Disk encryption pwd: *encryption password* None
+- Bootloader: Grub
+- Swap: True
+- Hostname: *Name of the host machine*
+- Root pwd: *rootpassword*
+- User account: *Add name and password* give superroot to user
+- Profile: desktop -> i3 -> AMD/ATI (open-source)
+- Audio: pipewire
+- Kernel: linux
+- Additional packages: firefox, vim, thunar
+- Network: Copy ISO network conf...
+- Timezone: *your timezone*
+- Automatic time synch: true
 - Additional repos: multilib
 
 After checking that the options are correct select `Install`. Go for a coffee :coffee: and wait.
 
 After finishing the installation process, the script will ask you if you'd like to chroot into the newly created installation. Select `no` and reboot the machine by running:
+
 ```
 reboot
 ```
-Boot into Arch and you should be greeted by the login manager. <b>Note:</b> If you installed Arch in a virtual machine remember to remove the ISO file before booting into the machine again.
+
+<b>IMPORTANT:</b> If you installed Arch in a virtual machine remember to remove the ISO file before booting into the machine again.
+
+Boot into Arch and you should be greeted by the login manager. 
 
 Congrats, Arch is now installed :tada:
 
