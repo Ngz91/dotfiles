@@ -107,6 +107,9 @@ To fix the resolution open your terminal with Mod+enter and run this command (Th
 ```
 xrandr
 ```
+
+<b>Note:</b> In case xrandr is not installed, run this command `sudo pacman -Sy xorg-xrandr`
+
 This will give you a list with different screens and their resolutions, select the one that you wish to use and run this command:
 ```
 xrandr --output *screen name here* --mode "resolution here"
