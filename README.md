@@ -239,6 +239,12 @@ First make a .fonts folder in the same directory where .config is, then download
 fc-cache -fv
 ```
 
+In case there are no unpackers configured for thunar, install these packages:
+
+```
+sudo pacman -S thunar-archive-plugin xarchiver p7zip unrar
+```
+
 <b>⬅️[Go back](#details) to details</b>
 
 ## Zsh & Oh-my-zsh
