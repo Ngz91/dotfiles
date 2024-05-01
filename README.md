@@ -395,6 +395,11 @@ If there's a warning telling you that "The script x is installed in '/home/myuse
 
 Also if you want Zathura to show the pdf page with it's original colors set recolor to false in the configuration file. `set recolor "false"`
 
+In case zathura is not opening any pdf or djvu file, install these packages:
+```
+sudo pacman -S zathura-pdf-mupdf zathura-djvu
+```
+
 You can assign Ranger a keybind similar to this
 ```
 bindsym $mod+Shift+v exec kitty -e ranger
